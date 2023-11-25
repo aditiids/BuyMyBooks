@@ -1,1 +1,59 @@
+body.bookstore-theme {
+    background-color: #f8f8f8;
+    font-family: 'Arial', sans-serif;
+}
 
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.shopping {
+    display: flex;
+    align-items: center;
+}
+
+.shopping img {
+    width: 30px;
+    margin-right: 5px;
+}
+
+.list, .listCard {
+    list-style: none;
+    padding: 0;
+}
+
+.card {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.checkOut {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.closeShopping {
+    cursor: pointer;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+}
