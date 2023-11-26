@@ -1,0 +1,5 @@
+[
+  {"title": "The Fault In Our Stars", "author": "John Green", "genre": "Fiction", "cost": 10.99, "bookID": 001},
+  {"title": "Book Title 2", "author": "Another Author", "genre": "Adventure", "cost": 15.99, "bookID": 002},
+  // Add more book entries as needed
+]
