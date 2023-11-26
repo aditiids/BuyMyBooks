@@ -1,59 +1,46 @@
-body.bookstore-theme {
-    background-color: #f8f8f8;
-    font-family: 'Arial', sans-serif;
-}
-
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-header {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.shopping {
-    display: flex;
-    align-items: center;
-}
-
-.shopping img {
-    width: 30px;
-    margin-right: 5px;
-}
-
-.list, .listCard {
-    list-style: none;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
     padding: 0;
 }
 
-.card {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
 }
 
-.checkOut {
-    margin-top: 20px;
+.books-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1em;
 }
 
-.closeShopping {
-    cursor: pointer;
-    color: #fff;
-    background-color: #007bff;
-    padding: 10px 15px;
-    border: none;
+.book {
+    background-color: #fff;
+    border: 1px solid #ddd;
     border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 1em;
+    padding: 1em;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.book:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
