@@ -33,6 +33,12 @@ section {
     transition: transform 0.3s ease-in-out;
 }
 
+.book img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
 .book:hover {
     transform: scale(1.05);
 }
