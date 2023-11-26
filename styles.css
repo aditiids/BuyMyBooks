@@ -4,14 +4,14 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
-    padding: 0; /* Invert colors on the entire page */
+    padding: 0;
 }
 
 header {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 1em; /* Reset the inversion for the header */
+    padding: 1em;
 }
 
 section {
@@ -29,9 +29,9 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 1em;
     padding: 1em;
-    max-width: 200px; /* Set a maximum width for each book */
+    max-width: 200px;
     text-align: center;
-    transition: transform 0.3s ease-in-out; /* Reset the inversion for the books */
+    transition: transform 0.3s ease-in-out;
 }
 
 .book img {
@@ -66,5 +66,11 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-    filter: invert(0); /* Reset the inversion for the footer */
+}
+
+/* Reset color inversion for specific elements */
+body,
+.book,
+footer {
+    filter: invert(0);
 }
