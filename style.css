@@ -21,6 +21,7 @@ section {
     padding: 1em;
 }
 
+/* Updated book styles for better arrangement */
 .book {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -28,7 +29,7 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 1em;
     padding: 1em;
-    width: 200px;
+    max-width: 200px; /* Set a maximum width for each book */
     text-align: center;
     transition: transform 0.3s ease-in-out;
 }
@@ -37,6 +38,20 @@ section {
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
+}
+
+/* Retro hover effect for buttons */
+.book button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.book button:hover {
+    background-color: #555;
 }
 
 .book:hover {
