@@ -5,6 +5,7 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    filter: invert(1); /* Invert colors on the entire page */
 }
 
 header {
@@ -12,6 +13,7 @@ header {
     color: white;
     text-align: center;
     padding: 1em;
+    filter: invert(0); /* Reset the inversion for the header */
 }
 
 section {
@@ -32,6 +34,7 @@ section {
     max-width: 200px; /* Set a maximum width for each book */
     text-align: center;
     transition: transform 0.3s ease-in-out;
+    filter: invert(0); /* Reset the inversion for the books */
 }
 
 .book img {
@@ -66,4 +69,5 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+    filter: invert(0); /* Reset the inversion for the footer */
 }
