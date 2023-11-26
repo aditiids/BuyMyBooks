@@ -5,7 +5,7 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    filter: invert(1); /* Invert colors on the entire page */
+    filter: invert(0); /* Invert colors on the entire page */
 }
 
 header {
