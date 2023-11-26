@@ -1,3 +1,5 @@
+/* styles.css */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -12,7 +14,7 @@ header {
     padding: 1em;
 }
 
-.books-container {
+section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
