@@ -52,6 +52,11 @@ section {
     margin-bottom: 10px;
 }
 
+.book p {
+    color: red; /* Set the price text color to red */
+    margin: 5px 0; /* Add a small margin for spacing */
+}
+
 /* Transparent button with color change on hover */
 .book button {
     background-color: rgba(0, 0, 0, 0); /* Transparent background */
