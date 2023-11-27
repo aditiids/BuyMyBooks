@@ -45,7 +45,7 @@ section {
 .book button {
     background-color: #333;
     color: white;
-    border: none;
+    border: 2px solid red; /* Add red border */
     padding: 8px 30px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
