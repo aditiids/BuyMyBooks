@@ -20,7 +20,9 @@
     <img src="images/banner.png" alt="Banner Image" style="width: 100%; height: auto;">
     <!-- Search Bar -->
     <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Search books...">
+        <!-- Updated search input with an event listener for the 'Enter' key -->
+        <input type="text" id="searchInput" placeholder="Search books..." onkeydown="if (event.key === 'Enter') searchBooks()">
+        <!-- Updated search button to trigger searchBooks() on click -->
         <button onclick="searchBooks()">Search</button>
     </div>
 </header>
