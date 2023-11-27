@@ -14,24 +14,20 @@ header {
     color: white;
     text-align: center;
     padding: 1em;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
+    position: relative;
 }
 
 header img {
     max-width: 100%;
     height: auto;
-    display: none; /* Hide the banner image in the fixed header */
 }
 
-/* Add a space for the fixed header */
 section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 1em;
-    margin-top: 70px;
+    margin-top: 20px;
 }
 
 /* Updated book styles for better arrangement */
@@ -109,15 +105,15 @@ footer {
     cursor: pointer;
     background: none;
     border: none;
-    z-index: 1000;
 }
 
 #viewCartBtn img {
     width: 30px;
-    opacity: 1.0;
+    opacity: 1;
 }
 
 /*consistent margin-top for Add to Cart buttons */
 .book button {
     margin-top: 10px;
 }
+
