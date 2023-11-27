@@ -119,14 +119,13 @@ footer {
 
 /*styles for the search bar */
 .search-bar {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 50px; /* Adjust the left position as needed */
 }
 
 #searchInput {
     display: none;
-    position: absolute;
-    top: 0;
-    right: 0;
     padding: 5px;
 }
 
@@ -138,5 +137,6 @@ footer {
 }
 
 #searchBtn img {
-    width: 20px; /* Adjust the width as needed */
+    width: 30px; /* Adjust the width as needed */
 }
+
