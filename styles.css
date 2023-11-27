@@ -33,7 +33,7 @@ section {
 /* Updated book styles for better arrangement */
 .book {
     background-color: black;
-    border: 2px solid white;
+    border: 0.5px solid white;
     border-radius: 2px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     margin: 1em;
@@ -44,7 +44,7 @@ section {
 }
 
 .book:hover {
-    transform: scale(1.10);
+    transform: scale(1.05);
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
