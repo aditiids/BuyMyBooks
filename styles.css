@@ -81,6 +81,15 @@ footer {
     color: red;
 }
 
+/* Add this to your CSS styles */
+#viewCartBtn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+
 /* Set consistent margin-top for Add to Cart buttons */
 .book button {
     margin-top: 10px;
