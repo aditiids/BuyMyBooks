@@ -15,9 +15,11 @@ header {
     text-align: center;
     padding: 1em;
     position: relative;
-    display: flex;
-    justify-content: space-between; /* Align items horizontally */
-    align-items: center; /* Align items vertically */
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
 }
 
 section {
@@ -38,12 +40,17 @@ section {
     padding: 1em;
     max-width: 200px;
     text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 .book:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Adjust the transition for a smoother effect */
+.book {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .book img {
@@ -90,8 +97,11 @@ footer {
     color: red;
 }
 
-/* View cart button */
+/*view cart button*/
 #viewCartBtn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
     cursor: pointer;
     background: none;
     border: none;
@@ -100,4 +110,33 @@ footer {
 #viewCartBtn img {
     width: 30px;
     opacity: 1;
+}
+
+/*consistent margin-top for Add to Cart buttons */
+.book button {
+    margin-top: 10px;
+}
+
+/*styles for the search bar */
+.search-bar {
+    position: relative;
+}
+
+#searchInput {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+}
+
+#searchBtn {
+    cursor: pointer;
+    background: none;
+    border: none;
+    margin-right: 10px;
+}
+
+#searchBtn img {
+    width: 20px; /* Adjust the width as needed */
 }
