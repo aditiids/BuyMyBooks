@@ -89,3 +89,8 @@ footer {
 .book p.price {
     color: red;
 }
+
+/* Set consistent margin-top for Add to Cart buttons */
+.book button {
+    margin-top: 10px;
+}
