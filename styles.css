@@ -45,10 +45,10 @@ section {
     background-color: #333;
     color: white;
     border: none;
-    padding: 8px 16px;
+    padding: 8px 25px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
-    border-radius: 10px; /* Add border-radius for rounded corners */
+    border-radius: 5px; /* Add border-radius for rounded corners */
 }
 
 .book button:hover {
