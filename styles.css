@@ -106,39 +106,3 @@ footer {
     width: 30px;
     opacity: 1;
 }
-
-/* Styles for the search bar */
-.search-bar {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-#searchBtn {
-    cursor: pointer;
-    background: none;
-    border: none;
-    margin-right: 10px;
-}
-
-#searchBtn img {
-    width: 30px;
-}
-
-#searchInput {
-    display: none;
-    padding: 5px;
-}
-
-/* Hide search button when search input is active */
-#searchBtn.active {
-    display: none;
-}
-
-/* Adjust the left position of the search bar as needed */
-.search-bar.active {
-    position: absolute;
-    top: 0; 
-    left: 50px;
-}
-
