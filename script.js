@@ -3,26 +3,15 @@
 // Initialize cart from local storage or an empty array
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-// Function to initialize the cart and view it
-function initCart() {
-    // If the cart is empty, initialize it with an empty array
-    if (!cart || cart.length === 0) {
-        cart = [];
-    }
-
-    // Save the initial or updated cart to local storage
-    localStorage.setItem('cart', JSON.stringify(cart));
-
-    // View the cart details
-    viewCart();
-}
-
 // Function to add a book to the cart
-function addToCart(title, price) {
+function addToCart(title, price, bookId) {
     cart.push({ title, price });
 
     // Save the updated cart to local storage
     localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Add bookId to the cart item for identification
+    cart[cart.length - 1].bookId = bookId;
 
     alert(`Added ${title} to the cart. Total Price: $${calculateTotal()}`);
 }
@@ -39,12 +28,32 @@ function viewCart() {
     } else {
         let cartDetails = "Cart Details:\n";
         cart.forEach((book) => {
-            cartDetails += `${book.title} - $${book.price}\n`;
+            cartDetails += `${book.title} - $${book.price} 
+                <button onclick="removeFromCart('${book.bookId}')">Remove</button>\n`;
         });
         cartDetails += `Total: $${calculateTotal()}`;
+        cartDetails += `\n<button onclick="checkout()">Checkout</button>`;
         alert(cartDetails);
     }
 }
+
+// Function to remove a book from the cart
+function removeFromCart(bookId) {
+    cart = cart.filter((book) => book.bookId !== bookId);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    viewCart();
+}
+
+// Function to handle the checkout process
+function checkout() {
+    alert("Checkout functionality goes here!");
+    // Add your checkout logic here (e.g., sending the order to a server, processing payment, etc.)
+}
+
+// Initialize the cart when the page loads
+window.onload = function () {
+    viewCart();
+};
 
 // Initialize the cart when the page loads
 window.onload = function () {
