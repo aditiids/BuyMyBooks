@@ -1,5 +1,3 @@
-// script.js
-
 // Initialize cart from local storage or an empty array
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -18,19 +16,20 @@ function calculateTotal() {
     return cart.reduce((total, book) => total + book.price, 0).toFixed(2);
 }
 
-// Function to view the cart
+// Function to view the cart and redirect to checkout page
 function viewCart() {
     if (cart.length === 0) {
-        alert("Your cart is empty.");
+        console.log("Your cart is empty.");
     } else {
         let cartDetails = "Cart Details:\n";
         cart.forEach((book) => {
-            cartDetails += `${book.title} - ₹${book.price} 
-                <button onclick="removeFromCart('${book.bookId}')">Remove</button>\n`;
+            cartDetails += `${book.title} - ₹${book.price}\n`;
         });
         cartDetails += `Total: ₹${calculateTotal()}`;
-        cartDetails += `\n<button onclick="checkout()">Checkout</button>`;
-        alert(cartDetails);
+        console.log(cartDetails);
+
+        // Redirect to the checkout page
+        window.location.href = 'checkout.html';
     }
 }
 
@@ -43,8 +42,8 @@ function removeFromCart(bookId) {
 
 // Function to handle the checkout process
 function checkout() {
-    // Redirect to the checkout page
-    window.location.href = 'checkout.html';
+    alert("Checkout functionality goes here!");
+    // Add your checkout logic here (e.g., sending the order to a server, processing payment, etc.)
 }
 
 // Function to display order summary on the checkout page
@@ -78,6 +77,16 @@ function submitOrder() {
         window.location.href = 'thankyou.html';
     }
 }
+
+// Initialize the cart when the page loads
+window.onload = function () {
+    viewCart();
+};
+
+// Initialize the checkout page when it loads
+window.onload = function () {
+    displayOrderSummary();
+};
 
 // Initialize the checkout page when it loads
 if (window.location.pathname.includes('checkout.html')) {
