@@ -28,29 +28,6 @@ function viewCart() {
     }
 }
 
-// Function to toggle the visibility of the search bar
-function toggleSearch() {
-    var searchInput = document.getElementById("searchInput");
-
-    // Toggle the display property of the search input
-    if (searchInput.style.display === "block") {
-        searchInput.style.display = "none";
-    } else {
-        searchInput.style.display = "block";
-        // Focus on the search input when it becomes visible
-        searchInput.focus();
-    }
-}
-
-function searchBooks() {
-    var searchTerm = document.getElementById("searchInput").value.toLowerCase();
-    var books = document.getElementsByClassName("book");
-
-    for (var i = 0; i < books.length; i++) {
-        var bookTitle = books[i].getElementsByTagName("h2")[0].innerText.toLowerCase();
-        if (bookTitle.includes(searchTerm)) {
-            books[i].style.display = "block";
-        } else {
             books[i].style.display = "none";
         }
     }
