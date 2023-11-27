@@ -10,14 +10,19 @@
 <body>
 
 <header>
+    <button id="searchBtn" onclick="toggleSearch()">
+        <img src="images/search-icon.png" alt="Search Icon">
+    </button>
     <h1>Aditi's Bookstore</h1>
     <button id="viewCartBtn" onclick="viewCart()">
         <img src="images/cart.png" alt="Shopping Cart Icon">
     </button>
-    <button id="searchBtn" onclick="toggleSearch()">
-        <img src="images/search.png" alt="Search Icon">
-    </button>
-    <input type="text" id="searchInput" placeholder="Search books..." class="hidden-search">
+    <img src="images/banner.png" alt="Banner Image" style="width: 100%; height: auto;">
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search books...">
+        <button onclick="searchBooks()">Search</button>
+    </div>
 </header>
 
 <section>
