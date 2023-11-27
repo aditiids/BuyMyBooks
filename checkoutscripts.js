@@ -62,3 +62,13 @@ function displayOrderSummary() {
         orderSummaryElement.innerHTML = orderDetails;
     }
 }
+// Initialize the cart when the page loads
+window.onload = function () {
+    // The viewCart function is not needed on page load
+    // If needed, you can call viewCart() here
+};
+
+// Initialize the checkout page when it loads
+if (window.location.pathname.includes('checkout.html')) {
+    displayOrderSummary();
+}
