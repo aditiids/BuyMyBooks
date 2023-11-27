@@ -2,8 +2,8 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: black; /* Set background to black */
-    color: white; /* Set text color to white */
+    background-color: black;
+    color: white;
     margin: 0;
     padding: 0;
 }
@@ -31,15 +31,14 @@ section {
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 1em;
-    margin-top: 20px; /* Add margin to create space between banner and books */
+    margin-top: 20px;
 }
 
-/* Updated book styles for better arrangement */
 .book {
-    background-color: #333; /* Dark gray for the book background */
-    border: 1px solid #555; /* Slightly lighter border color */
+    background-color: #333;
+    border: 1px solid #555;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* White shadow for contrast */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     margin: 1em;
     padding: 1em;
     max-width: 200px;
@@ -53,35 +52,40 @@ section {
     margin-bottom: 10px;
 }
 
-.book p {
-    color: red; /* Set the price text color to red */
-    margin: 5px 0; /* Add a small margin for spacing */
-}
-
 /* Transparent button with color change on hover */
 .book button {
-    background-color: rgba(0, 0, 0, 0); /* Transparent background */
+    background-color: rgba(0, 0, 0, 0);
     color: white;
     border: 2px solid #fff;
     padding: 8px 30px;
-    margin-top: 10px; /* Add top margin to create space between buttons */
+    margin-top: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
     border-radius: 5px;
 }
 
 .book button:hover {
-    background-color: black; /* Set background to black on hover */
+    background-color: black;
     color: white;
     border: 2px solid #ff0000;
 }
 
 footer {
-    background-color: #333; /* Dark gray for the footer background */
+    background-color: #333;
     color: white;
     text-align: center;
     padding: 1em;
     margin-top: 20px;
     position: relative;
     z-index: 1;
+}
+
+/* Set the color of Genre and Author names to white */
+.book p {
+    color: white;
+}
+
+/* Set the color of the Price to red */
+.book p.price {
+    color: red;
 }
