@@ -20,11 +20,6 @@ header {
     align-items: center; /* Align items vertically */
 }
 
-header img {
-    max-width: 100%;
-    height: auto;
-}
-
 section {
     display: flex;
     flex-wrap: wrap;
