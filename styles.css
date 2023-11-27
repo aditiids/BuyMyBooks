@@ -31,6 +31,7 @@ section {
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 1em;
+    margin-top: 20px; /* Add margin to create space between banner and books */
 }
 
 /* Updated book styles for better arrangement */
