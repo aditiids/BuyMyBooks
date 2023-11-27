@@ -1,13 +1,14 @@
 /* styles.css */
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Circular', sans-serif; /* Use Circular font for the body */
     background-color: #f0f0f0; /* Light gray for a minimalistic background */
     margin: 0;
     padding: 0;
 }
 
 header {
+    font-family: 'Circular', sans-serif; /* Use Circular font for the header */
     background-color: #333;
     color: white;
     text-align: center;
