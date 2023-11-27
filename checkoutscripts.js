@@ -43,10 +43,6 @@ function displayCartDetails() {
     }
 }
 
-// Call the displayCartDetails function when the page loads
-window.onload = function () {
-    displayCartDetails();
-};
 
 // Function to remove a book from the cart
 function removeFromCart(bookId) {
