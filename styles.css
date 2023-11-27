@@ -20,10 +20,7 @@ header {
 header img {
     max-width: 100%;
     height: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 100%; /* Ensure the banner takes up the full width */
 }
 
 section {
@@ -31,7 +28,7 @@ section {
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 1em;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .book {
