@@ -1,3 +1,5 @@
+/* styles.css */
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: black;
@@ -13,6 +15,9 @@ header {
     text-align: center;
     padding: 1em;
     position: relative;
+    display: flex;
+    justify-content: space-between; /* Align items horizontally */
+    align-items: center; /* Align items vertically */
 }
 
 header img {
@@ -92,9 +97,6 @@ footer {
 
 /* View cart button */
 #viewCartBtn {
-    position: fixed;
-    top: 10px;
-    right: 10px;
     cursor: pointer;
     background: none;
     border: none;
@@ -107,9 +109,7 @@ footer {
 
 /* Styles for the search bar */
 .search-bar {
-    position: absolute;
-    top: 0;
-    left: 50px; /* Adjust the left position as needed */
+    position: relative;
     display: flex;
     align-items: center;
 }
@@ -122,7 +122,7 @@ footer {
 }
 
 #searchBtn img {
-    width: 30px; /* Adjust the width as needed */
+    width: 30px;
 }
 
 #searchInput {
@@ -133,4 +133,11 @@ footer {
 /* Hide search button when search input is active */
 #searchBtn.active {
     display: none;
+}
+
+/* Adjust the left position of the search bar as needed */
+.search-bar.active {
+    position: absolute;
+    top: 0;
+    left: 50px;
 }
