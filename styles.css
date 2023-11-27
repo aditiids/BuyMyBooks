@@ -87,8 +87,14 @@ footer {
     top: 10px;
     right: 10px;
     cursor: pointer;
+    background: none;
+    border: none;
 }
 
+#viewCartBtn img {
+    width: 20px; /* Adjust the width as needed */
+    opacity: 0.7; /* Adjust the opacity as needed */
+}
 
 /*consistent margin-top for Add to Cart buttons */
 .book button {
