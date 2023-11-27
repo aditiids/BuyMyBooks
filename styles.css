@@ -102,8 +102,8 @@ footer {
 }
 
 #viewCartBtn img {
-    width: 20px; /* Adjust the width as needed */
-    opacity: 0.7; /* Adjust the opacity as needed */
+    width: 30px; /* Adjust the width as needed */
+    opacity: 1.0; /* Adjust the opacity as needed */
 }
 
 /*consistent margin-top for Add to Cart buttons */
