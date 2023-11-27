@@ -23,8 +23,7 @@ function viewCart() {
     } else {
         let cartDetails = "Cart Details:\n";
         cart.forEach((book) => {
-            cartDetails += `${book.title} - ₹${book.price} 
-                <button onclick="removeFromCart('${book.bookId}')">Remove</button>\n`;
+            cartDetails += `${book.title} - ₹${book.price}\n`;
         });
         cartDetails += `Total: ₹${calculateTotal()}`;
 
@@ -49,8 +48,6 @@ function closePopup() {
 
 // Function to go to the checkout page
 function goToCheckout() {
-    // Close the cart popup before going to checkout
-    closePopup();
     // Redirect to the checkout page
     window.location.href = 'checkout.html';
 }
