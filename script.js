@@ -1,9 +1,13 @@
 // script.js
 
-let cart = []; // Array to store added books
+let cart = JSON.parse(localStorage.getItem('cart')) || []; // Initialize cart from local storage
 
 function addToCart(title, price) {
     cart.push({ title, price });
+
+    // Save the updated cart to local storage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
     alert(`Added ${title} to the cart. Total Price: $${calculateTotal()}`);
 }
 
