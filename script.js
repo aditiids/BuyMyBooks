@@ -1,7 +1,9 @@
 // script.js
 
-let cart = JSON.parse(localStorage.getItem('cart')) || []; // Initialize cart from local storage
+// Initialize cart from local storage or an empty array
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+// Function to add a book to the cart
 function addToCart(title, price) {
     cart.push({ title, price });
 
@@ -11,10 +13,12 @@ function addToCart(title, price) {
     alert(`Added ${title} to the cart. Total Price: $${calculateTotal()}`);
 }
 
+// Function to calculate the total price of items in the cart
 function calculateTotal() {
     return cart.reduce((total, book) => total + book.price, 0).toFixed(2);
 }
 
+// Function to view the cart
 function viewCart() {
     if (cart.length === 0) {
         alert("Your cart is empty.");
@@ -28,7 +32,7 @@ function viewCart() {
     }
 }
 
-            books[i].style.display = "none";
-        }
-    }
-}
+// Initialize the cart when the page loads
+window.onload = function () {
+    viewCart();
+};
