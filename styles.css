@@ -28,6 +28,9 @@ section {
     justify-content: space-around;
     padding: 1em;
     margin-top: 20px;
+    background-color: black;  /* Set the background color to black */
+    border: 2px solid grey;  /* Set a grey border */
+    border-radius: 10px;
 }
 
 /* Updated book styles for better arrangement */
