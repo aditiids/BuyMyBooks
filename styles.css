@@ -45,14 +45,15 @@ section {
     background-color: #333;
     color: white;
     border: none;
-    padding: 8px 25px;
+    padding: 8px 30px;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
     border-radius: 5px; /* Add border-radius for rounded corners */
 }
 
 .book button:hover {
     background-color: #555;
+    color: black; /* Change text color to black on hover */
 }
 
 .book:hover {
