@@ -13,49 +13,14 @@ function calculateTotal() {
     return cart.reduce((total, book) => total + book.price, 0).toFixed(2);
 }
 
-// Function to view the cart in a popup
+// Function to view the cart and go to checkout
 function viewCart() {
     if (cart.length === 0) {
         console.log("Your cart is empty.");
     } else {
-        let cartDetails = "Cart Details:\n";
-        cart.forEach((book) => {
-            cartDetails += `${book.title} - ₹${book.price}\n`;
-        });
-        cartDetails += `Total: ₹${calculateTotal()}`;
-
-        createPopup(cartDetails);
+        // Redirect to the checkout page
+        window.location.href = 'checkout.html';
     }
-}
-
-// Function to close the popup
-function closePopup() {
-    const popup = document.querySelector('.popup');
-    document.body.removeChild(popup);
-}
-
-// Function to create a popup
-function createPopup(content) {
-    const popup = document.createElement('div');
-    popup.className = 'popup';
-    popup.innerHTML = `<div class="popup-content">
-                          <span class="close" onclick="closePopup()">&times;</span>
-                          <p>${content}</p>
-                          <button onclick="goToCheckout()">Go to Checkout</button>
-                       </div>`;
-
-    document.body.appendChild(popup);
-}
-
-// Function to update the cart in local storage
-function updateCart() {
-    localStorage.setItem('cart', JSON.stringify(cart));
-}
-
-// Function to go to the checkout page
-function goToCheckout() {
-    // Redirect to the checkout page
-    window.location.href = 'checkout.html';
 }
 
 // Function to remove a book from the cart
@@ -63,6 +28,11 @@ function removeFromCart(bookId) {
     cart = cart.filter((book) => book.bookId !== bookId);
     updateCart();
     viewCart();
+}
+
+// Function to update the cart in local storage
+function updateCart() {
+    localStorage.setItem('cart', JSON.stringify(cart));
 }
 
 // Function to handle the checkout process
@@ -105,7 +75,8 @@ function submitOrder() {
 
 // Initialize the cart when the page loads
 window.onload = function () {
-    viewCart();
+    // The viewCart function is not needed on page load
+    // If needed, you can call viewCart() here
 };
 
 // Initialize the checkout page when it loads
