@@ -27,6 +27,17 @@ function viewCart() {
         alert(cartDetails);
     }
 }
+// Function to toggle the visibility of the search bar
+function toggleSearch() {
+    var searchInput = document.getElementById("searchInput");
+
+    // Toggle the display property of the search input
+    if (searchInput.style.display === "block") {
+        searchInput.style.display = "none";
+    } else {
+        searchInput.style.display = "block";
+    }
+}
 
 function searchBooks() {
     var searchTerm = document.getElementById("searchInput").value.toLowerCase();
