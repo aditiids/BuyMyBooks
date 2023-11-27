@@ -48,7 +48,7 @@ section {
     padding: 8px 16px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
-    border-radius: 50%; /* Make the button round */
+    border-radius: 10px; /* Add border-radius for rounded corners */
 }
 
 .book button:hover {
