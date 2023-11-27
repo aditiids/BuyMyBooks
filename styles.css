@@ -53,7 +53,7 @@ section {
 }
 
 .book button:hover {
-    background-color: #555;
+    background-color: white; /* Change background color to white on hover */
     color: black; /* Change text color to black on hover */
 }
 
