@@ -62,13 +62,13 @@ section {
 }
 
 footer {
-    background-color: #333;
+    background-color: #f0e8d7; /* Same color as the webpage */
     color: white;
     text-align: center;
     padding: 1em;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    margin-top: 20px; /* Add space before the footer */
+    position: relative;
+    z-index: 1;
 }
 
 /* Reset color inversion for specific elements */
