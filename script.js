@@ -4,10 +4,7 @@ let cart = JSON.parse(localStorage.getItem('cart')) || [];
 // Function to add a book to the cart
 function addToCart(title, price, bookId) {
     cart.push({ title, price, bookId });
-
-    // Save the updated cart to local storage
-    localStorage.setItem('cart', JSON.stringify(cart));
-
+    updateCart();
     alert(`Added ${title} to the cart. Total Price: ₹${calculateTotal()}`);
 }
 
@@ -27,20 +24,32 @@ function viewCart() {
         });
         cartDetails += `Total: ₹${calculateTotal()}`;
 
-        // Display cart details in the modal
-        const cartModal = document.getElementById('cartModal');
-        const cartDetailsElement = document.getElementById('cartDetails');
-        cartDetailsElement.textContent = cartDetails;
-
-        // Show the modal
-        cartModal.style.display = 'block';
+        createPopup(cartDetails);
     }
 }
 
 // Function to close the popup
 function closePopup() {
-    const cartModal = document.getElementById('cartModal');
-    cartModal.style.display = 'none';
+    const popup = document.querySelector('.popup');
+    document.body.removeChild(popup);
+}
+
+// Function to create a popup
+function createPopup(content) {
+    const popup = document.createElement('div');
+    popup.className = 'popup';
+    popup.innerHTML = `<div class="popup-content">
+                          <span class="close" onclick="closePopup()">&times;</span>
+                          <p>${content}</p>
+                          <button onclick="goToCheckout()">Go to Checkout</button>
+                       </div>`;
+
+    document.body.appendChild(popup);
+}
+
+// Function to update the cart in local storage
+function updateCart() {
+    localStorage.setItem('cart', JSON.stringify(cart));
 }
 
 // Function to go to the checkout page
@@ -52,7 +61,7 @@ function goToCheckout() {
 // Function to remove a book from the cart
 function removeFromCart(bookId) {
     cart = cart.filter((book) => book.bookId !== bookId);
-    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCart();
     viewCart();
 }
 
@@ -87,7 +96,7 @@ function submitOrder() {
 
         // Clear the cart after submitting the order
         cart = [];
-        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCart();
 
         // Redirect to a thank you page or homepage
         window.location.href = 'thankyou.html';
