@@ -27,6 +27,7 @@ function viewCart() {
         alert(cartDetails);
     }
 }
+
 // Function to toggle the visibility of the search bar
 function toggleSearch() {
     var searchInput = document.getElementById("searchInput");
@@ -36,6 +37,8 @@ function toggleSearch() {
         searchInput.style.display = "none";
     } else {
         searchInput.style.display = "block";
+        // Focus on the search input when it becomes visible
+        searchInput.focus();
     }
 }
 
