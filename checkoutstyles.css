@@ -15,11 +15,6 @@ header {
     position: relative;
 }
 
-header img {
-    max-width: 100%;
-    height: auto;
-}
-
 section {
     display: flex;
     flex-wrap: wrap;
@@ -85,4 +80,19 @@ footer {
     padding: 1em;
     background-color: #333;
     color: white;
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.book-image {
+    max-width: 50px; /* Set the desired width for the images */
+    margin-right: 10px;
+}
+
+.order-details {
+    flex: 1;
 }
