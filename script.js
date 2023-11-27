@@ -41,16 +41,24 @@ function checkout() {
     // Add your checkout logic here (e.g., sending the order to a server, processing payment, etc.)
 }
 
-// Function to display order summary on the checkout page
 function displayOrderSummary() {
     const orderSummaryElement = document.getElementById('orderSummary');
+
     if (cart.length === 0) {
         orderSummaryElement.innerHTML = '<p>Your cart is empty.</p>';
     } else {
         let orderDetails = '<p>Order Summary:</p>';
+
         cart.forEach((book) => {
-            orderDetails += `<p>${book.title} - ₹${book.price}</p>`;
+            orderDetails += `<div class="order-item">
+                                <img src="images/${book.bookId}.jpg" alt="${book.title} Image" class="book-image">
+                                <div class="order-details">
+                                    <p>${book.title}</p>
+                                    <p>Price: ₹${book.price}</p>
+                                </div>
+                             </div>`;
         });
+
         orderDetails += `<p>Total: ₹${calculateTotal()}</p>`;
         orderSummaryElement.innerHTML = orderDetails;
     }
