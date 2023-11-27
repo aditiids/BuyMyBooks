@@ -27,23 +27,20 @@ function viewCart() {
         });
         cartDetails += `Total: ₹${calculateTotal()}`;
 
-        // Create a popup
-        const popup = document.createElement('div');
-        popup.className = 'popup';
-        popup.innerHTML = `<div class="popup-content">
-                              <span class="close" onclick="closePopup()">&times;</span>
-                              <p>${cartDetails}</p>
-                              <button onclick="goToCheckout()">Go to Checkout</button>
-                           </div>`;
+        // Display cart details in the modal
+        const cartModal = document.getElementById('cartModal');
+        const cartDetailsElement = document.getElementById('cartDetails');
+        cartDetailsElement.textContent = cartDetails;
 
-        document.body.appendChild(popup);
+        // Show the modal
+        cartModal.style.display = 'block';
     }
 }
 
 // Function to close the popup
 function closePopup() {
-    const popup = document.querySelector('.popup');
-    document.body.removeChild(popup);
+    const cartModal = document.getElementById('cartModal');
+    cartModal.style.display = 'none';
 }
 
 // Function to go to the checkout page
