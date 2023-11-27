@@ -140,3 +140,28 @@ footer {
 #searchBtn img {
     width: 20px; /* Adjust the width as needed */
 }
+
+/* checkout popups */
+
+.popup {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
