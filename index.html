@@ -10,21 +10,11 @@
 <body>
 
 <header>
-    <button id="searchBtn" onclick="toggleSearch()">
-        <img src="images/search.png" alt="Search Icon">
-    </button>
     <h1>Aditi's Bookstore</h1>
     <button id="viewCartBtn" onclick="viewCart()">
         <img src="images/cart.png" alt="Shopping Cart Icon">
     </button>
     <img src="images/banner.png" alt="Banner Image" style="width: 100%; height: auto;">
-    <!-- Search Bar -->
-    <div class="search-bar">
-        <!-- Updated search input with an event listener for the 'Enter' key -->
-        <input type="text" id="searchInput" placeholder="Search books..." onkeydown="if (event.key === 'Enter') searchBooks()">
-        <!-- Updated search button to trigger searchBooks() on click -->
-        <button onclick="searchBooks()">Search</button>
-    </div>
 </header>
 
 <section>
