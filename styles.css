@@ -1,8 +1,8 @@
 /* styles.css */
 
 body {
-    font-family: 'Circular', sans-serif; /* Use Circular font for the body */
-    background-color: #f0f0f0; /* Light gray for a minimalistic background */
+    font-family: 'Circular', sans-serif;
+    background-color: #f8f8f8; /* Light gray for a minimalistic background */
     margin: 0;
     padding: 0;
 }
