@@ -48,6 +48,25 @@ window.onload = function () {
     displayCartDetails();
 };
 
+// Function to remove a book from the cart
+function removeFromCart(bookId) {
+    cart = cart.filter((book) => book.bookId !== bookId);
+    updateCart();
+    viewCart();
+}
+
+// Function to update the cart in local storage
+function updateCart() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+// Function to handle the checkout process
+function checkout() {
+    alert("Checkout functionality goes here!");
+    // Add your checkout logic here (e.g., sending the order to a server, processing payment, etc.)
+}
+
+
 // Function to display order summary on the checkout page
 function displayOrderSummary() {
     const orderSummaryElement = document.getElementById('orderSummary');
