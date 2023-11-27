@@ -55,10 +55,10 @@ section {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
-.cart-item img {
-    max-width: 80px;
+#cartImages img {
+    max-width: 100px; /* Adjust the size as needed */
     height: auto;
-    margin-right: 1em;
+    margin-right: 10px;
 }
 
 .book-details {
