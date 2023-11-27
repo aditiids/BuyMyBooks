@@ -113,8 +113,8 @@ footer {
 }
 
 #viewCartBtn img {
-    width: 20px;
-    opacity: 0.7;
+    width: 30px;
+    opacity: 1.0;
 }
 
 /*consistent margin-top for Add to Cart buttons */
