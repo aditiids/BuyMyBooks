@@ -3,6 +3,20 @@
 // Initialize cart from local storage or an empty array
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+// Function to initialize the cart and view it
+function initCart() {
+    // If the cart is empty, initialize it with an empty array
+    if (!cart || cart.length === 0) {
+        cart = [];
+    }
+
+    // Save the initial or updated cart to local storage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // View the cart details
+    viewCart();
+}
+
 // Function to add a book to the cart
 function addToCart(title, price) {
     cart.push({ title, price });
@@ -34,5 +48,5 @@ function viewCart() {
 
 // Initialize the cart when the page loads
 window.onload = function () {
-    viewCart();
+    initCart();
 };
