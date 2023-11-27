@@ -16,7 +16,7 @@ function calculateTotal() {
     return cart.reduce((total, book) => total + book.price, 0).toFixed(2);
 }
 
-// Function to view the cart and redirect to checkout page
+// Function to view the cart in a popup
 function viewCart() {
     if (cart.length === 0) {
         console.log("Your cart is empty.");
@@ -26,11 +26,30 @@ function viewCart() {
             cartDetails += `${book.title} - ₹${book.price}\n`;
         });
         cartDetails += `Total: ₹${calculateTotal()}`;
-        console.log(cartDetails);
 
-        // Redirect to the checkout page
-        window.location.href = 'checkout.html';
+        // Create a popup
+        const popup = document.createElement('div');
+        popup.className = 'popup';
+        popup.innerHTML = `<div class="popup-content">
+                              <span class="close" onclick="closePopup()">&times;</span>
+                              <p>${cartDetails}</p>
+                              <button onclick="goToCheckout()">Go to Checkout</button>
+                           </div>`;
+
+        document.body.appendChild(popup);
     }
+}
+
+// Function to close the popup
+function closePopup() {
+    const popup = document.querySelector('.popup');
+    document.body.removeChild(popup);
+}
+
+// Function to go to the checkout page
+function goToCheckout() {
+    // Redirect to the checkout page
+    window.location.href = 'checkout.html';
 }
 
 // Function to remove a book from the cart
@@ -68,7 +87,7 @@ function submitOrder() {
     } else {
         // Add your logic for submitting the order (e.g., sending data to a server)
         alert("Order submitted successfully!");
-        
+
         // Clear the cart after submitting the order
         cart = [];
         localStorage.setItem('cart', JSON.stringify(cart));
@@ -81,11 +100,6 @@ function submitOrder() {
 // Initialize the cart when the page loads
 window.onload = function () {
     viewCart();
-};
-
-// Initialize the checkout page when it loads
-window.onload = function () {
-    displayOrderSummary();
 };
 
 // Initialize the checkout page when it loads
