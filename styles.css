@@ -17,12 +17,6 @@ header {
     position: relative;
 }
 
-header img {
-    max-width: 100%;
-    height: auto;
-    width: 100%; /* Ensure the banner takes up the full width */
-}
-
 section {
     display: flex;
     flex-wrap: wrap;
