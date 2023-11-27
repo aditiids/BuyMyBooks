@@ -23,3 +23,17 @@ function viewCart() {
         alert(cartDetails);
     }
 }
+
+function searchBooks() {
+    var searchTerm = document.getElementById("searchInput").value.toLowerCase();
+    var books = document.getElementsByClassName("book");
+
+    for (var i = 0; i < books.length; i++) {
+        var bookTitle = books[i].getElementsByTagName("h2")[0].innerText.toLowerCase();
+        if (bookTitle.includes(searchTerm)) {
+            books[i].style.display = "block";
+        } else {
+            books[i].style.display = "none";
+        }
+    }
+}
