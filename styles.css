@@ -138,6 +138,7 @@ footer {
 /* Adjust the left position of the search bar as needed */
 .search-bar.active {
     position: absolute;
-    top: 0;
+    top: 0; 
     left: 50px;
 }
+
