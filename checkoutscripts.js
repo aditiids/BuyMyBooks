@@ -47,3 +47,18 @@ function displayCartDetails() {
 window.onload = function () {
     displayCartDetails();
 };
+
+// Function to display order summary on the checkout page
+function displayOrderSummary() {
+    const orderSummaryElement = document.getElementById('orderSummary');
+    if (cart.length === 0) {
+        orderSummaryElement.innerHTML = '<p>Your cart is empty.</p>';
+    } else {
+        let orderDetails = '<p>Order Summary:</p>';
+        cart.forEach((book) => {
+            orderDetails += `<p>${book.title} - ₹${book.price}</p>`;
+        });
+        orderDetails += `<p>Total: ₹${calculateTotal()}</p>`;
+        orderSummaryElement.innerHTML = orderDetails;
+    }
+}
