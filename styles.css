@@ -109,14 +109,9 @@ footer {
 .search-bar {
     position: absolute;
     top: 0;
-    left: 60px; /* Adjust the left position as needed */
+    left: 50px; /* Adjust the left position as needed */
     display: flex;
     align-items: center;
-}
-
-#searchInput {
-    display: none;
-    padding: 5px;
 }
 
 #searchBtn {
@@ -128,4 +123,14 @@ footer {
 
 #searchBtn img {
     width: 30px; /* Adjust the width as needed */
+}
+
+#searchInput {
+    display: none;
+    padding: 5px;
+}
+
+/* Hide search button when search input is active */
+#searchBtn.active {
+    display: none;
 }
