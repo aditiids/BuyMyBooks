@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
     <meta charset="UTF-8">
@@ -7,15 +8,16 @@
     <title>Aditiiii</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<header>
-    <h1>Aditi's Bookstore</h1>
-    <button id="viewCartBtn" onclick="viewCart()">
-        <img src="images/cart.png" alt="Shopping Cart Icon">
-    </button>
-    <img src="images/banner.png" alt="Banner Image" style="width: 100%; height: auto;">
-</header>
+    <header>
+        <h1>Aditi's Bookstore</h1>
+        <button id="viewCartBtn" onclick="goToCheckout()">
+            <img src="images/cart.png" alt="Shopping Cart Icon">
+        </button>
+        <img src="images/banner.png" alt="Banner Image" style="width: 100%; height: auto;">
+    </header>
 
 <section>
     <!-- Book 1 -->
@@ -120,17 +122,18 @@
 </section>
     
 <div id="cartModal" class="popup">
-    <div class="popup-content">
-        <span class="close" onclick="closePopup()">&times;</span>
-        <p id="cartDetails"></p>
-        <button onclick="goToCheckout()">Go to Checkout</button>
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <p id="cartDetails"></p>
+            <button onclick="goToCheckout()">Go to Checkout</button>
+        </div>
     </div>
-</div>
 
-<footer>
-    <p>&copy; 2023 Aditi's Bookstore. No rights reserved.</p>
-</footer>
-<script src="script.js"></script>
+    <footer>
+        <p>&copy; 2023 Aditi's Bookstore. No rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
