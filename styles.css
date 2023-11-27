@@ -29,15 +29,12 @@ section {
     padding: 1em;
     margin-top: 20px;
     background-color: black;  /* Set the background color to black */
-    border: 2px solid grey;  /* Set a grey border */
-    border-radius: 10px;
-}
 
 /* Updated book styles for better arrangement */
 .book {
-    background-color: #333;
-    border: 1px solid #555;
-    border-radius: 5px;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 2px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     margin: 1em;
     padding: 1em;
@@ -47,7 +44,7 @@ section {
 }
 
 .book:hover {
-    transform: scale(1.05);
+    transform: scale(1.10);
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
