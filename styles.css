@@ -48,6 +48,7 @@ section {
     color: white;
     border: 2px solid #fff;
     padding: 8px 30px;
+    margin-top: 10px; /* Add top margin to create space between buttons */
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
     border-radius: 5px;
@@ -58,8 +59,6 @@ section {
     color: white;
     border: 2px solid #ff0000;
 }
-
-/* ... (rest of your styles) ... */
 
 footer {
     background-color: #333; /* Dark gray for the footer background */
