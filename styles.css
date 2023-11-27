@@ -14,17 +14,27 @@ header {
     color: white;
     text-align: center;
     padding: 1em;
-    position: relative;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
+header img {
+    max-width: 100%;
+    height: auto;
+    display: none; /* Hide the banner image in the fixed header */
+}
+
+/* Add a space for the fixed header */
 section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 1em;
-    margin-top: 20px;
+    margin-top: 70px;
 }
 
+/* Updated book styles for better arrangement */
 .book {
     background-color: #333;
     border: 1px solid #555;
@@ -99,11 +109,12 @@ footer {
     cursor: pointer;
     background: none;
     border: none;
+    z-index: 1000;
 }
 
 #viewCartBtn img {
-    width: 30px; /* Adjust the width as needed */
-    opacity: 1.0; /* Adjust the opacity as needed */
+    width: 20px;
+    opacity: 0.7;
 }
 
 /*consistent margin-top for Add to Cart buttons */
