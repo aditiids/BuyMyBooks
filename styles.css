@@ -47,7 +47,8 @@ section {
     justify-content: space-around;
     padding: 1em;
     margin-top: 20px;
-    background-color: black;  /* Set the background color to black */
+    background-color: black; /* Set the background color to black */
+}
 
 /* Updated book styles for better arrangement */
 .book {
@@ -116,7 +117,7 @@ footer {
     color: red;
 }
 
-/*view cart button*/
+/* View cart button */
 #viewCartBtn {
     cursor: pointer;
     background: none;
@@ -141,11 +142,12 @@ footer {
     cursor: pointer;
 }
 
-/*consistent margin-top for Add to Cart buttons */
+/* Consistent margin-top for Add to Cart buttons */
 .book button {
     margin-top: 10px;
 }
 
+/* Adjust video styles */
 video {
     width: 100%;
     height: auto;
