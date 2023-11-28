@@ -1,66 +1,70 @@
-/* Header styles with smooth transition */
-header {
+body {
     font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
     background-color: black;
     color: white;
     text-align: center;
     padding: 1em;
-    transition: background-color 0.5s ease-in-out;
 }
 
-/* Logo styles with smooth transition */
-#logo {
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header-buttons img {
     cursor: pointer;
-    max-height: 50px;
-    margin: 5px;
-    transition: transform 0.3s ease-in-out;
 }
 
-/* Header buttons styles with smooth transition */
-.header-buttons img,
-#viewCartBtn {
-    transition: filter 0.3s ease-in-out;
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
-.header-buttons img:hover,
-#viewCartBtn:hover {
-    filter: brightness(1.2);
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1em;
+    margin-top: 20px;
+    background-color: black;
 }
 
-/* Book container styles with smooth transition */
+.genre-group {
+    flex: 1 1 300px;
+    margin: 10px;
+}
+
 .book {
-    background-color: #1f1f1f;
-    border: 2px solid #333;
-    border-radius: 8px;
+    background-color: black;
+    border: 0.5px solid white;
+    border-radius: 2px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     margin: 1em;
     padding: 1em;
     max-width: 200px;
     text-align: center;
-    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Book container hover effect with smooth transition */
 .book:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-    background-color: #333;
 }
 
-/* Book image styles with smooth transition */
 .book img {
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
-    transition: transform 0.3s ease-in-out;
 }
 
-/* Book image hover effect with smooth transition */
-.book:hover img {
-    transform: scale(1.1);
-}
-
-/* Button styles with smooth transition */
 .book button {
     background-color: rgba(0, 0, 0, 0);
     color: white;
@@ -72,24 +76,60 @@ header {
     border-radius: 5px;
 }
 
-/* Button hover effect with smooth transition */
 .book button:hover {
-    background-color: #333;
+    background-color: black;
     color: white;
     border: 2px solid #ff0000;
 }
 
-/* Footer styles with smooth transition */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 1em;
     margin-top: 20px;
-    transition: background-color 0.5s ease-in-out;
 }
 
-/* Footer hover effect with smooth transition */
-footer:hover {
-    background-color: #222;
+.book p {
+    color: white;
+}
+
+.book p.price {
+    color: red;
+}
+
+#viewCartBtn {
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+#viewCartBtn img {
+    width: 50px;
+    opacity: 1;
+}
+
+#logo {
+    cursor: pointer;
+    max-height: 50px;
+    margin: 5px;
+}
+
+/* Smooth animation for book container */
+.genre-group {
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Responsive styling */
+@media (max-width: 870px) {
+    .genre-group {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 570px) {
+    .genre-group {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
 }
