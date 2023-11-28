@@ -1,3 +1,5 @@
+/* styles.css */
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: black;
@@ -13,9 +15,11 @@ header {
     text-align: left;
     padding: 1em;
     position: relative;
-    display: flex;  
-    justify-content: space-between;  
-    align-items: center;  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2; /* Ensure the header is above other content */
+    width: 100%; /* Make the header take the full width */
 }
 
 header img {
@@ -26,6 +30,7 @@ header img {
 .header-buttons {
     display: flex;
     gap: 10px;
+    margin-right: 10px; /* Adjust the right margin for spacing */
 }
 
 .header-buttons img {
@@ -134,4 +139,12 @@ footer {
 /*consistent margin-top for Add to Cart buttons */
 .book button {
     margin-top: 10px;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 1; /* Ensure the video is behind the header */
 }
