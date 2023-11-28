@@ -334,6 +334,7 @@ form.sign-in-form {
 
   .btn.transparent {
     width: 110px;
+    color: 000;
     height: 35px;
     font-size: 0.7rem;
   }
