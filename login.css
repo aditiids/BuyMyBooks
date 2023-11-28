@@ -134,12 +134,12 @@ form.sign-in-form {
 
 .btn {
   width: 150px;
-  background-color: 000;
+  background-color: none;
   border: 2;
   outline: none;
   height: 49px;
   border-radius: 49px;
-  color: #fff;
+  color: #000;
   text-transform: uppercase;
   font-weight: 600;
   margin: 10px 0;
