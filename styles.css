@@ -15,14 +15,25 @@ header {
     text-align: left;
     padding: 1em;
     position: relative;
-    display: flex;  /* Add display: flex to enable flexbox layout */
-    justify-content: space-between;  /* Move items to the right */
-    align-items: center;  /* Center items vertically */
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
 }
 
 header img {
     max-width: 100%;
     height: auto;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 section {
