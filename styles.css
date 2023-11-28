@@ -165,4 +165,11 @@ video {
     display: block;
 }
 
+#logo {
+    cursor: pointer; 
+    max-height: 50px; 
+    margin: 10px; 
+}
+
+
 
