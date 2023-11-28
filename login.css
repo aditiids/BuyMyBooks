@@ -134,8 +134,8 @@ form.sign-in-form {
 
 .btn {
   width: 150px;
-  background-color: none;
-  border: 2;
+  background: none;
+  border: 2px solid #fff;
   outline: none;
   height: 49px;
   border-radius: 49px;
