@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Vortex</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>BOOK VORTEX</h1>
+        <div class="header-buttons">
+            <img src="images/profile.png" alt="Profile" onclick="window.location.href='page2.html'">
+            <img src="images/genre.png" alt="Genres" onclick="window.location.href='genre.html'">
+            <button id="viewCartBtn" onclick="viewCart()">
+                <img src="images/cart.png" alt="Shopping Cart Icon">
+            </button>
+        </div>
+        
+    </header>
+
+    <section>
+        <!-- Genre Header -->
+        <h2 class="genre-header">Dystopian</h2>
+
+        <!-- Book 1 -->
+        <div class="book" id="book1">
+            <img src="images/1984.jpg" alt="1984 Image">
+            <h2>1984</h2>
+            <p>Author: George Orwell</p>
+            <p class="price">₹149</p>
+            <button onclick="addToCart('1984', 149, 'book1')">Add to Cart</button>
+        </div>
+
+        <!-- Add more books in the Dystopian genre as needed -->
+
+        <!-- Genre Header -->
+        <h2 class="genre-header">Self Help</h2>
+
+        <!-- Book 2 -->
+        <div class="book" id="book2">
+            <img src="images/thealchemist.jpg" alt="The Alchemist Image">
+            <h2>The Alchemist</h2>
+            <p>Author: Paulo Coelho</p>
+            <p class="price">₹1699</p>
+            <button onclick="addToCart('The Alchemist', 1699)">Add to Cart</button>
+        </div>
+
+        <!-- Add more books in the Self Help genre as needed -->
+
+        <!-- Repeat the structure for other genres -->
+
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Aditi's Bookstore. No rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
 
