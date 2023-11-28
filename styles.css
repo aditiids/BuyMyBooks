@@ -166,10 +166,11 @@ video {
 }
 
 #logo {
-    cursor: pointer; 
-    max-height: 2px; 
+    cursor: pointer;
+    max-height: 50px; 
     margin: 5px;
 }
+
 
 
 
