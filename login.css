@@ -230,6 +230,11 @@ form.sign-in-form {
   font-size: 0.8rem;
 }
 
+.btn.transparent {
+  color: fff;
+  background: black;
+}
+
 .right-panel .image,
 .right-panel .content {
   transform: translateX(800px);
