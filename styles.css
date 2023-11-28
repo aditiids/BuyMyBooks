@@ -30,6 +30,12 @@ header {
     cursor: pointer;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 video {
     width: 100%;
     height: auto;
@@ -152,6 +158,11 @@ video {
     display: block;
     position: relative; /* Adjust to relative position */
     z-index: 1; /* Ensure the video is behind the header */
+}
+.fit-to-page {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 
