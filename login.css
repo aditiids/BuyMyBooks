@@ -149,6 +149,7 @@ form.sign-in-form {
 
 .btn:hover {
   color: 000;
+  border: 2px solid #fff;
   background-color: #05e62e;
 }
 .panels-container {
