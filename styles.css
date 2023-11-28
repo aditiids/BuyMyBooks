@@ -127,13 +127,12 @@ footer {
 /* Arrange buttons in the header to the right */
 .header-buttons {
     display: flex;
-    position: right;
+    justify-content: flex-end; /* Align to the right */
     gap: 10px;
 }
 
 .header-buttons button {
     background: none;
-    position: right;
     border: none;
     cursor: pointer;
 }
@@ -147,6 +146,7 @@ video {
     width: 100%;
     height: auto;
     display: block;
-    position: bottom;
+    position: relative; /* Adjust to relative position */
     z-index: 1; /* Ensure the video is behind the header */
 }
+
