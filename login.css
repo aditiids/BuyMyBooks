@@ -230,9 +230,9 @@ form.sign-in-form {
   font-size: 0.8rem;
 }
 
-.btn.transparent {
-  color: fff;
-  background: black;
+.btn.transparent:hover {
+  color: #fff;
+  background: #000
 }
 
 .right-panel .image,
