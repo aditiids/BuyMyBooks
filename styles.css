@@ -1,7 +1,7 @@
 /* styles.css */
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: black;
     color: white;
     margin: 0;
@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: black;
     color: white;
     text-align: right; /* Align text to the right */
