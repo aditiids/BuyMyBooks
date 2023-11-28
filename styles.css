@@ -12,7 +12,7 @@ header {
     font-family: 'Poppins', sans-serif;
     background-color: black;
     color: white;
-    text-align: right; /* Align text to the right */
+    text-align: center; /* Align text to the right */
     padding: 1em;
     position: absolute;
     top: 0; /* Align the header to the top */
