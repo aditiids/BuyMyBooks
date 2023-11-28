@@ -13,46 +13,86 @@
 
     <header>
         <h1>BOOK VORTEX</h1>
-        <div class="header-buttons">
-            <img src="images/profile.png" alt="Profile" onclick="window.location.href='page2.html'">
-            <img src="images/genre.png" alt="Genres" onclick="window.location.href='genre.html'">
+        <nav class="header-buttons">
+            <img src="images/profile.png" alt="Profile Icon" onclick="window.location.href='page2.html'">
+            <img src="images/genre.png" alt="Genres Icon" onclick="window.location.href='genre.html'">
             <button id="viewCartBtn" onclick="viewCart()">
                 <img src="images/cart.png" alt="Shopping Cart Icon">
             </button>
-        </div>
-        
+        </nav>
     </header>
 
     <section>
-        <!-- Genre Header -->
-        <h2 class="genre-header">Dystopian</h2>
 
-        <!-- Book 1 -->
-        <div class="book" id="book1">
-            <img src="images/1984.jpg" alt="1984 Image">
-            <h2>1984</h2>
-            <p>Author: George Orwell</p>
-            <p class="price">₹149</p>
-            <button onclick="addToCart('1984', 149, 'book1')">Add to Cart</button>
+        <!-- Dystopian Genre -->
+        <div class="genre-container">
+            <h2 class="genre-header">Dystopian</h2>
+
+            <!-- Subhead: Classic Dystopian -->
+            <h3 class="subhead">Classic Dystopian</h3>
+
+            <!-- Book 1 -->
+            <div class="book" id="book1">
+                <img src="images/1984.jpg" alt="1984 Image">
+                <h2>1984</h2>
+                <p>Author: George Orwell</p>
+                <p class="price">₹149</p>
+                <button onclick="addToCart('1984', 149, 'book1')">Add to Cart</button>
+            </div>
+
+            <!-- Add more books for Classic Dystopian -->
+
+            <!-- Subhead: Modern Dystopian -->
+            <h3 class="subhead">Modern Dystopian</h3>
+
+            <!-- Book 2 -->
+            <div class="book" id="book2">
+                <img src="images/moderndystopian.jpg" alt="Modern Dystopian Image">
+                <h2>Modern Dystopian Title</h2>
+                <p>Author: Author Name</p>
+                <p class="price">₹XX</p>
+                <button onclick="addToCart('Modern Dystopian Title', XX, 'book2')">Add to Cart</button>
+            </div>
+
+            <!-- Add more books for Modern Dystopian -->
+
         </div>
 
-        <!-- Add more books in the Dystopian genre as needed -->
+        <!-- Self Help Genre -->
+        <div class="genre-container">
+            <h2 class="genre-header">Self Help</h2>
 
-        <!-- Genre Header -->
-        <h2 class="genre-header">Self Help</h2>
+            <!-- Subhead: Motivation -->
+            <h3 class="subhead">Motivation</h3>
 
-        <!-- Book 2 -->
-        <div class="book" id="book2">
-            <img src="images/thealchemist.jpg" alt="The Alchemist Image">
-            <h2>The Alchemist</h2>
-            <p>Author: Paulo Coelho</p>
-            <p class="price">₹1699</p>
-            <button onclick="addToCart('The Alchemist', 1699)">Add to Cart</button>
+            <!-- Book 3 -->
+            <div class="book" id="book3">
+                <img src="images/motivation.jpg" alt="Motivation Image">
+                <h2>Motivation Title</h2>
+                <p>Author: Author Name</p>
+                <p class="price">₹YY</p>
+                <button onclick="addToCart('Motivation Title', YY, 'book3')">Add to Cart</button>
+            </div>
+
+            <!-- Add more books for Motivation -->
+
+            <!-- Subhead: Personal Development -->
+            <h3 class="subhead">Personal Development</h3>
+
+            <!-- Book 4 -->
+            <div class="book" id="book4">
+                <img src="images/personaldevelopment.jpg" alt="Personal Development Image">
+                <h2>Personal Development Title</h2>
+                <p>Author: Author Name</p>
+                <p class="price">₹ZZ</p>
+                <button onclick="addToCart('Personal Development Title', ZZ, 'book4')">Add to Cart</button>
+            </div>
+
+            <!-- Add more books for Personal Development -->
+
         </div>
 
-        <!-- Add more books in the Self Help genre as needed -->
-
-        <!-- Repeat the structure for other genres -->
+        <!-- Repeat the structure for other genres and subheads -->
 
     </section>
 
@@ -65,4 +105,3 @@
 </body>
 
 </html>
-
