@@ -151,14 +151,6 @@ footer {
     margin-top: 10px;
 }
 
-/* Adjust video styles */
-video {
-    width: 100%;
-    height: auto;
-    display: block;
-    position: relative; /* Adjust to relative position */
-    z-index: 1; /* Ensure the video is behind the header */
-}
 .fit-to-page {
     max-width: 100%;
     height: auto;
