@@ -1,0 +1,95 @@
+/* Header styles with smooth transition */
+header {
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    transition: background-color 0.5s ease-in-out;
+}
+
+/* Logo styles with smooth transition */
+#logo {
+    cursor: pointer;
+    max-height: 50px;
+    margin: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Header buttons styles with smooth transition */
+.header-buttons img,
+#viewCartBtn {
+    transition: filter 0.3s ease-in-out;
+}
+
+.header-buttons img:hover,
+#viewCartBtn:hover {
+    filter: brightness(1.2);
+}
+
+/* Book container styles with smooth transition */
+.book {
+    background-color: #1f1f1f;
+    border: 2px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    margin: 1em;
+    padding: 1em;
+    max-width: 200px;
+    text-align: center;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+/* Book container hover effect with smooth transition */
+.book:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    background-color: #333;
+}
+
+/* Book image styles with smooth transition */
+.book img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Book image hover effect with smooth transition */
+.book:hover img {
+    transform: scale(1.1);
+}
+
+/* Button styles with smooth transition */
+.book button {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: 2px solid #fff;
+    padding: 8px 30px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+/* Button hover effect with smooth transition */
+.book button:hover {
+    background-color: #333;
+    color: white;
+    border: 2px solid #ff0000;
+}
+
+/* Footer styles with smooth transition */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    margin-top: 20px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+/* Footer hover effect with smooth transition */
+footer:hover {
+    background-color: #222;
+}
