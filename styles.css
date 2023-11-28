@@ -102,9 +102,6 @@ footer {
 
 /*view cart button*/
 #viewCartBtn {
-    position: fixed;
-    top: 10px;
-    right: 10px;
     cursor: pointer;
     background: none;
     border: none;
@@ -113,6 +110,18 @@ footer {
 #viewCartBtn img {
     width: 30px;
     opacity: 1;
+}
+
+/* Arrange buttons in the header to the right */
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 /*consistent margin-top for Add to Cart buttons */
