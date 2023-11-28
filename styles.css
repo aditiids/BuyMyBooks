@@ -1,5 +1,3 @@
-/* styles.css */
-
 body {
     font-family: 'Roboto', sans-serif;
     background-color: black;
@@ -30,9 +28,7 @@ header img {
     gap: 10px;
 }
 
-.header-buttons button {
-    background: none;
-    border: none;
+.header-buttons img {
     cursor: pointer;
 }
 
