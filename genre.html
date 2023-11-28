@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Vortex</title>
@@ -11,27 +11,35 @@
 
 <body>
 
+    <!-- Header Section -->
     <header>
+        <!-- Logo as a button for the home page -->
+        <a href="index.html">
+            <img src="images/logonew.png" alt="Book Vortex Logo" id="logo">
+        </a>
+
         <h1>BOOK VORTEX</h1>
-        <nav class="header-buttons">
-            <img src="images/profile.png" alt="Profile Icon" onclick="window.location.href='page2.html'">
-            <img src="images/genre.png" alt="Genres Icon" onclick="window.location.href='genre.html'">
+        
+        <!-- Header Buttons -->
+        <div class="header-buttons">
+            <img src="images/profile.png" alt="Button 2" onclick="window.location.href='login.html'">
+            <img src="images/genre.png" alt="Button 3" onclick="window.location.href='genre.html'">
             <button id="viewCartBtn" onclick="viewCart()">
                 <img src="images/cart.png" alt="Shopping Cart Icon">
             </button>
-        </nav>
+        </div>
     </header>
 
+    <!-- Book Section -->
     <section>
 
-        <!-- Dystopian Genre -->
-        <div class="genre-container">
-            <h2 class="genre-header">Dystopian</h2>
+        <!-- Placeholder for Now Image -->
+        <img src="images/now.png" alt="Now Image" class="fit-to-page">
 
-            <!-- Subhead: Classic Dystopian -->
-            <h3 class="subhead">Classic Dystopian</h3>
-
-            <!-- Book 1 -->
+        <!-- Dystopian Books -->
+        <div class="genre-group">
+            <h2>Dystopian</h2>
+            <!-- Book Containers (Add dystopian books here) -->
             <div class="book" id="book1">
                 <img src="images/1984.jpg" alt="1984 Image">
                 <h2>1984</h2>
@@ -39,69 +47,69 @@
                 <p class="price">₹149</p>
                 <button onclick="addToCart('1984', 149, 'book1')">Add to Cart</button>
             </div>
+            <!-- Add more dystopian books here -->
+        </div>
 
-            <!-- Add more books for Classic Dystopian -->
-
-            <!-- Subhead: Modern Dystopian -->
-            <h3 class="subhead">Modern Dystopian</h3>
-
-            <!-- Book 2 -->
+        <!-- Self Help Books -->
+        <div class="genre-group">
+            <h2>Self Help</h2>
+            <!-- Book Containers (Add self-help books here) -->
             <div class="book" id="book2">
-                <img src="images/moderndystopian.jpg" alt="Modern Dystopian Image">
-                <h2>Modern Dystopian Title</h2>
-                <p>Author: Author Name</p>
-                <p class="price">₹XX</p>
-                <button onclick="addToCart('Modern Dystopian Title', XX, 'book2')">Add to Cart</button>
+                <img src="images/thealchemist.jpg" alt="The Alchemist Image">
+                <h2>The Alchemist</h2>
+                <p>Author: Paulo Coelho</p>
+                <p class="price">₹1699</p>
+                <button onclick="addToCart('The Alchemist', 1699, 'book2')">Add to Cart</button>
             </div>
-
-            <!-- Add more books for Modern Dystopian -->
-
+            <!-- Add more self-help books here -->
         </div>
 
-        <!-- Self Help Genre -->
-        <div class="genre-container">
-            <h2 class="genre-header">Self Help</h2>
-
-            <!-- Subhead: Motivation -->
-            <h3 class="subhead">Motivation</h3>
-
-            <!-- Book 3 -->
+        <!-- Fantasy Books -->
+        <div class="genre-group">
+            <h2>Fantasy</h2>
+            <!-- Book Containers (Add fantasy books here) -->
             <div class="book" id="book3">
-                <img src="images/motivation.jpg" alt="Motivation Image">
-                <h2>Motivation Title</h2>
-                <p>Author: Author Name</p>
-                <p class="price">₹YY</p>
-                <button onclick="addToCart('Motivation Title', YY, 'book3')">Add to Cart</button>
+                <img src="images/gameofthrones.jpg" alt="Game of Thrones Image">
+                <h2>A Game Of Thrones</h2>
+                <p>Author: George R R Martin</p>
+                <p class="price">₹499</p>
+                <button onclick="addToCart('A Game Of Thrones', 499, 'book3')">Add to Cart</button>
             </div>
-
-            <!-- Add more books for Motivation -->
-
-            <!-- Subhead: Personal Development -->
-            <h3 class="subhead">Personal Development</h3>
-
-            <!-- Book 4 -->
-            <div class="book" id="book4">
-                <img src="images/personaldevelopment.jpg" alt="Personal Development Image">
-                <h2>Personal Development Title</h2>
-                <p>Author: Author Name</p>
-                <p class="price">₹ZZ</p>
-                <button onclick="addToCart('Personal Development Title', ZZ, 'book4')">Add to Cart</button>
-            </div>
-
-            <!-- Add more books for Personal Development -->
-
+            <!-- Add more fantasy books here -->
         </div>
 
-        <!-- Repeat the structure for other genres and subheads -->
+        <!-- Manga Books -->
+        <div class="genre-group">
+            <h2>Manga</h2>
+            <!-- Book Containers (Add manga books here) -->
+            <div class="book" id="book4">
+                <img src="images/vinlandsaga.jpg" alt="Vinland Saga Image">
+                <h2>Vinland Saga Vol. 01</h2>
+                <p>Author: Makoto Yukimura</p>
+                <p class="price">₹899</p>
+                <button onclick="addToCart('Vinland Saga Vol. 01', 899, 'book4')">Add to Cart</button>
+            </div>
+            <!-- Add more manga books here -->
+        </div>
 
-    </section>
+        <!-- Sci-Fi Books -->
+        <div class="genre-group">
+            <h2>Sci-Fi</h2>
+            <!-- Book Containers (Add sci-fi books here) -->
+            <div class="book" id="book5">
+                <img src="images/foundations.jpg" alt="Foundation Image">
+                <h2>Foundation</h2>
+                <p>Author: Issac Asimov</p>
+                <p class="price">₹349</p>
+                <button onclick="addToCart('Foundation', 349, 'book5')">Add to Cart</button>
+            </div>
+            <!-- Add more sci-fi books here -->
+        </div>
 
-    <footer>
-        <p>&copy; 2023 Aditi's Bookstore. No rights reserved.</p>
-    </footer>
+        <!-- Fantasy Books -->
+        <div class="genre-group">
+            <h2>Fantasy</h2>
+            <!-- Book Containers (Add more fantasy books here) -->
+            <div class="book" id="book6">
+                <img src="images/lordoftherings.jpg" alt="Lord of the
 
-    <script src="script.js"></script>
-
-</body>
-
-</html>
