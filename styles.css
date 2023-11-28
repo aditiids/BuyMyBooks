@@ -22,19 +22,23 @@ header {
     width: 100%; /* Make the header take the full width */
 }
 
-header img {
-    max-width: 100%;
-    height: auto;
-}
-
 .header-buttons {
     display: flex;
+    justify-content: flex-end; /* Align to the right */
     gap: 10px;
-    margin-right: 10px; /* Adjust the right margin for spacing */
 }
 
 .header-buttons img {
     cursor: pointer;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    bottom: 0; /* Align the video to the bottom of the header */
+    z-index: 1; /* Ensure the video is behind the header */
 }
 
 section {
