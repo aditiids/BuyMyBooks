@@ -221,6 +221,7 @@ form.sign-in-form {
 
 .btn.transparent {
   margin: 0;
+  color: 000;
   background: none;
   border: 2px solid #000;
   width: 130px;
