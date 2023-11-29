@@ -142,7 +142,7 @@ footer {
 }
 
 #viewCartBtn img {
-    width: 30px;
+    width: 50px;
     background: #000;
     opacity: 1;
 }
@@ -173,7 +173,7 @@ footer {
 
 #logo {
     cursor: pointer;
-    max-height: 50px; 
+    max-height: 80px; 
     margin: 5px;
 }
 
