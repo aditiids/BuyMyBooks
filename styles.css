@@ -29,8 +29,8 @@ header {
 }
 
 .logo {
-    width: 150px;
-    max-height: 150px;
+    width: 100px;
+    max-height: 100px;
     margin: 5px;
     cursor: pointer;
 }
@@ -68,7 +68,7 @@ section {
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 1em;
-    margin-top: 100px;
+    margin-top: 120px;
     background-color: black; /* Set the background color to black */
 }
 
