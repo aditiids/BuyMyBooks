@@ -40,8 +40,23 @@ header {
     padding: 10px 0;
 }
     
-    
+nav ul{
+    list-style: none;
+    width: 100%;
+    text-alighn: right;
+    padding-right: 60px;
+}
 
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li{
+    display: inline-block;
+    margint: 10px 20px;
+}
+    
 .header-buttons {
     display: flex;
     gap: 10px;
