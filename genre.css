@@ -1,3 +1,5 @@
+/* styles.css */
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: black;
@@ -7,10 +9,35 @@ body {
 }
 
 header {
-    background-color: black;
+    font-family: 'Poppins', sans-serif;
+    background-color: transparent;
     color: white;
     text-align: center;
     padding: 1em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-link {
+    text-decoration: none;
+}
+
+.logo {
+    width: 130px;
+    max-height: 130px;
+    margin: 5px;
+    left-margin: 8px;
+    cursor: pointer;
+}
+
+h1 {
+    margin: 0;
 }
 
 .header-buttons {
@@ -28,18 +55,36 @@ img {
     display: block;
 }
 
-section {
+.video-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+.genre-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     padding: 1em;
-    margin-top: 20px;
-    background-color: black;
+    margin-top: 120px;
 }
 
 .genre-group {
-    flex: 1 1 300px;
-    margin: 10px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.genre-group h2 {
+    color: white;
+    margin-bottom: 5px;
 }
 
 .book {
@@ -57,6 +102,10 @@ section {
 .book:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.book {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .book img {
@@ -88,6 +137,8 @@ footer {
     text-align: center;
     padding: 1em;
     margin-top: 20px;
+    position: relative;
+    z-index: 1;
 }
 
 .book p {
@@ -100,36 +151,29 @@ footer {
 
 #viewCartBtn {
     cursor: pointer;
+    position: right;
     background: none;
     border: none;
 }
 
 #viewCartBtn img {
     width: 50px;
+    background: none;
     opacity: 1;
+}
+
+.book button {
+    margin-top: 10px;
+}
+
+.fit-to-page {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 #logo {
     cursor: pointer;
-    max-height: 50px;
+    max-height: 80px; 
     margin: 5px;
-}
-
-/* Smooth animation for book container */
-.genre-group {
-    transition: transform 0.5s ease-in-out;
-}
-
-/* Responsive styling */
-@media (max-width: 870px) {
-    .genre-group {
-        flex: 1 1 100%;
-    }
-}
-
-@media (max-width: 570px) {
-    .genre-group {
-        flex: 1 1 100%;
-        margin: 10px 0;
-    }
 }
