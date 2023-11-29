@@ -32,7 +32,7 @@ header {
     width: 130px;
     max-height: 130px;
     margin: 5px;
-    margin-left: 8px; /* Corrected property name */
+    left-margin: 8px;
     cursor: pointer;
 }
 
@@ -147,8 +147,7 @@ footer {
 /* View cart button */
 #viewCartBtn {
     cursor: pointer;
-    position: absolute;
-    right: 0; /* Align to the right */
+    position: right;
     background: none;
     border: none;
 }
@@ -158,6 +157,7 @@ footer {
     background: none;
     opacity: 1;
 }
+
 
 /* Consistent margin-top for Add to Cart buttons */
 .book button {
@@ -175,6 +175,3 @@ footer {
     max-height: 80px; 
     margin: 5px;
 }
-
-
-
