@@ -160,12 +160,14 @@ footer {
 /* View cart button */
 #viewCartBtn {
     cursor: pointer;
+    position: right;
     background: none;
     border: none;
 }
 
 #viewCartBtn img {
     width: 50px;
+    background: none;
     opacity: 1;
 }
 
