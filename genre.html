@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Vortex</title>
-    <link rel="stylesheet" href="genre.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -19,7 +19,7 @@
         </a>
 
         <h1>BOOK VORTEX</h1>
-
+        
         <!-- Header Buttons -->
         <div class="header-buttons">
             <img src="images/profile.png" alt="Button 2" onclick="window.location.href='login.html'">
@@ -36,10 +36,9 @@
         <!-- Dystopian Books -->
         <div class="genre-group">
             <h2>Dystopian</h2>
-            <!-- Book Containers (Add dystopian books here) -->
             <div class="book" id="book1">
                 <img src="images/1984.jpg" alt="1984 Image">
-                <h2>1984</h2>
+                <h3>1984</h3>
                 <p>Author: George Orwell</p>
                 <p class="price">₹149</p>
                 <button onclick="addToCart('1984', 149, 'book1')">Add to Cart</button>
@@ -50,10 +49,9 @@
         <!-- Self Help Books -->
         <div class="genre-group">
             <h2>Self Help</h2>
-            <!-- Book Containers (Add self-help books here) -->
             <div class="book" id="book2">
                 <img src="images/thealchemist.jpg" alt="The Alchemist Image">
-                <h2>The Alchemist</h2>
+                <h3>The Alchemist</h3>
                 <p>Author: Paulo Coelho</p>
                 <p class="price">₹1699</p>
                 <button onclick="addToCart('The Alchemist', 1699, 'book2')">Add to Cart</button>
@@ -64,10 +62,9 @@
         <!-- Fantasy Books -->
         <div class="genre-group">
             <h2>Fantasy</h2>
-            <!-- Book Containers (Add fantasy books here) -->
             <div class="book" id="book3">
                 <img src="images/gameofthrones.jpg" alt="Game of Thrones Image">
-                <h2>A Game Of Thrones</h2>
+                <h3>A Game Of Thrones</h3>
                 <p>Author: George R R Martin</p>
                 <p class="price">₹499</p>
                 <button onclick="addToCart('A Game Of Thrones', 499, 'book3')">Add to Cart</button>
@@ -78,10 +75,9 @@
         <!-- Manga Books -->
         <div class="genre-group">
             <h2>Manga</h2>
-            <!-- Book Containers (Add manga books here) -->
             <div class="book" id="book4">
                 <img src="images/vinlandsaga.jpg" alt="Vinland Saga Image">
-                <h2>Vinland Saga Vol. 01</h2>
+                <h3>Vinland Saga Vol. 01</h3>
                 <p>Author: Makoto Yukimura</p>
                 <p class="price">₹899</p>
                 <button onclick="addToCart('Vinland Saga Vol. 01', 899, 'book4')">Add to Cart</button>
@@ -89,7 +85,7 @@
             <!-- Add more manga books here -->
             <div class="book" id="book8">
                 <img src="images/deathnote.jpg" alt="Death Note Image">
-                <h2>Death Note (Black Edition)</h2>
+                <h3>Death Note (Black Edition)</h3>
                 <p>Author: Takeshi Obata</p>
                 <p class="price">₹649</p>
                 <button onclick="addToCart('Death Note Vol. 01', 649, 'book8')">Add to Cart</button>
@@ -99,26 +95,24 @@
         <!-- Sci-Fi Books -->
         <div class="genre-group">
             <h2>Sci-Fi</h2>
-            <!-- Book Containers (Add sci-fi books here) -->
             <div class="book" id="book5">
                 <img src="images/foundations.jpg" alt="Foundation Image">
-                <h2>Foundation</h2>
+                <h3>Foundation</h3>
                 <p>Author: Issac Asimov</p>
                 <p class="price">₹349</p>
                 <button onclick="addToCart('Foundation', 349, 'book5')">Add to Cart</button>
             </div>
             <div class="book" id="book9">
                 <img src="images/dune.jpg" alt="Dune Image">
-                <h2>Dune</h2>
+                <h3>Dune</h3>
                 <p>Author: Frank Herbert</p>
                 <p class="price">₹1199</p>
                 <button onclick="addToCart('Dune', 1199, 'book9')">Add to Cart</button>
             </div>
             <div class="book" id="book10">
-                <img src="images/hgtg.jpg" alt="Hitchhiker's Guide Image">
-                <h2>Hitchhiker's Guide to the Galaxy</h2>
+                <img src="images/hgtg.jpg" alt="Hitchhiker's Guide to the Galaxy Image">
+                <h3>Hitchhiker's Guide to the Galaxy</h3>
                 <p>Author: J.R.R. Tolkein</p>
-                <p class="price">₹999</p>
                 <button onclick="addToCart('Hitchhiker\'s Guide to the Galaxy', 999, 'book10')">Add to Cart</button>
             </div>
             <!-- Add more sci-fi books here -->
@@ -127,38 +121,27 @@
         <!-- Fantasy Books -->
         <div class="genre-group">
             <h2>Fantasy</h2>
-            <!-- Book Containers (Add more fantasy books here) -->
             <div class="book" id="book6">
                 <img src="images/lordoftherings.jpg" alt="Lord of the Rings Image">
-                <h2>Lord Of The Rings</h2>
+                <h3>Lord of the Rings</h3>
                 <p>Author: J.R.R. Tolkein</p>
                 <p class="price">₹499</p>
-                <button onclick="addToCart('Lord Of The Rings', 499, 'book6')">Add to Cart</button>
+                <button onclick="addToCart('Lord of the Rings', 499, 'book6')">Add to Cart</button>
             </div>
             <!-- Add more fantasy books here -->
         </div>
 
-        <!-- Fantasy Books -->
-        <div class="genre-group">
-            <h2>Sci-Fi</h2>
-            <!-- Book Containers (Add more sci-fi books here) -->
-            <div class="book" id="book11">
-                <img src="images/martian.jpg" alt="The Martian Image">
-                <h2>The Martian</h2>
-                <p>Author: Andy Weir</p>
-                <p class="price">₹599</p>
-                <button onclick="addToCart('The Martian', 599, 'book11')">Add to Cart</button>
-            </div>
-            <!-- Add more sci-fi books here -->
-        </div>
-
     </section>
 
+    <!-- Footer Section -->
     <footer>
         <p>&copy; 2023 Aditi's Bookstore. No rights reserved.</p>
     </footer>
+
+    <!-- Script Section -->
     <script src="script.js"></script>
 
 </body>
 
 </html>
+
