@@ -86,6 +86,8 @@ video {
 .genre-group h2 {
     color: white;
     margin-bottom: 5px;
+    width: 100%;
+    text-align: center;
 }
 
 .book {
@@ -178,4 +180,3 @@ footer {
     max-height: 80px; 
     margin: 5px;
 }
-
