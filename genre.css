@@ -1,4 +1,4 @@
-/* styles.css */
+/* genre.css */
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -32,7 +32,7 @@ header {
     width: 130px;
     max-height: 130px;
     margin: 5px;
-    left-margin: 8px;
+    margin-left: 8px; /* Corrected the property name */
     cursor: pointer;
 }
 
