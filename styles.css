@@ -10,7 +10,7 @@ body {
 
 header {
     font-family: 'Poppins', sans-serif;
-    background-color: black;
+    background-color: none;
     color: white;
     text-align: center; /* Align text to the center */
     padding: 1em;
