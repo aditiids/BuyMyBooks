@@ -78,6 +78,9 @@ video {
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .genre-group h2 {
@@ -175,3 +178,4 @@ footer {
     max-height: 80px; 
     margin: 5px;
 }
+
