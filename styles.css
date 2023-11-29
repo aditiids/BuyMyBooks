@@ -173,13 +173,13 @@ footer {
 #viewCartBtn {
     cursor: pointer;
     position: right;
-    background: none;
+    background: #000;
     border: none;
 }
 
 #viewCartBtn img {
     width: 30px;
-    background: none;
+    background: #000;
     opacity: 1;
 }
 
