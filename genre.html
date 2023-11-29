@@ -19,7 +19,7 @@
         </a>
 
         <h1>BOOK VORTEX</h1>
-        
+
         <!-- Header Buttons -->
         <div class="header-buttons">
             <img src="images/profile.png" alt="Button 2" onclick="window.location.href='login.html'">
@@ -31,10 +31,7 @@
     </header>
 
     <!-- Book Section -->
-    <section>
-
-        <!-- Placeholder for Now Image -->
-        <img src="images/now.png" alt="Now Image" class="fit-to-page">
+    <section class="genre-container">
 
         <!-- Dystopian Books -->
         <div class="genre-group">
@@ -91,11 +88,11 @@
             </div>
             <!-- Add more manga books here -->
             <div class="book" id="book8">
-              <img src="images/deathnote.jpg" alt="Book Title 6 Image">
-              <h2>Death Note (Black Edition)</h2>
-              <p>Author: Takeshi Obata</p>
-              <p class="price">₹649<p>
-              <button onclick="addToCart('Death Note Vol. 01', 649)">Add to Cart</button>
+                <img src="images/deathnote.jpg" alt="Death Note Image">
+                <h2>Death Note (Black Edition)</h2>
+                <p>Author: Takeshi Obata</p>
+                <p class="price">₹649</p>
+                <button onclick="addToCart('Death Note Vol. 01', 649, 'book8')">Add to Cart</button>
             </div>
         </div>
 
@@ -111,18 +108,19 @@
                 <button onclick="addToCart('Foundation', 349, 'book5')">Add to Cart</button>
             </div>
             <div class="book" id="book9">
-                <img src="images/dune.jpg" alt="Book Title 6 Image">
-                <h2>Dune</h2></h2>
+                <img src="images/dune.jpg" alt="Dune Image">
+                <h2>Dune</h2>
                 <p>Author: Frank Herbert</p>
                 <p class="price">₹1199</p>
-                <button onclick="addToCart('Dune', 1199)">Add to Cart</button>
+                <button onclick="addToCart('Dune', 1199, 'book9')">Add to Cart</button>
             </div>
             <div class="book" id="book10">
-                <img src="images/hgtg.jpg" alt="Book Title 6 Image">
+                <img src="images/hgtg.jpg" alt="Hitchhiker's Guide Image">
                 <h2>Hitchhiker's Guide to the Galaxy</h2>
                 <p>Author: J.R.R. Tolkein</p>
-                <button onclick="addToCart('Hitchhiker\'s Guide to the Galaxy', 999)">Add to Cart</button>
-             </div>
+                <p class="price">₹999</p>
+                <button onclick="addToCart('Hitchhiker\'s Guide to the Galaxy', 999, 'book10')">Add to Cart</button>
+            </div>
             <!-- Add more sci-fi books here -->
         </div>
 
@@ -131,5 +129,36 @@
             <h2>Fantasy</h2>
             <!-- Book Containers (Add more fantasy books here) -->
             <div class="book" id="book6">
-                <img src="images/lordoftherings.jpg" alt="Lord of the
+                <img src="images/lordoftherings.jpg" alt="Lord of the Rings Image">
+                <h2>Lord Of The Rings</h2>
+                <p>Author: J.R.R. Tolkein</p>
+                <p class="price">₹499</p>
+                <button onclick="addToCart('Lord Of The Rings', 499, 'book6')">Add to Cart</button>
+            </div>
+            <!-- Add more fantasy books here -->
+        </div>
 
+        <!-- Fantasy Books -->
+        <div class="genre-group">
+            <h2>Sci-Fi</h2>
+            <!-- Book Containers (Add more sci-fi books here) -->
+            <div class="book" id="book11">
+                <img src="images/martian.jpg" alt="The Martian Image">
+                <h2>The Martian</h2>
+                <p>Author: Andy Weir</p>
+                <p class="price">₹599</p>
+                <button onclick="addToCart('The Martian', 599, 'book11')">Add to Cart</button>
+            </div>
+            <!-- Add more sci-fi books here -->
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Aditi's Bookstore. No rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
