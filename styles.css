@@ -55,13 +55,17 @@ img {
     display: block;
 }
 
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222; /* Background color for the video container */
+}
+
 video {
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    display: block;
-    position: absolute;
-    bottom: 0; /* Align the video to the bottom of the header */
-    z-index: 1; /* Ensure the video is behind the header */
 }
 
 section {
