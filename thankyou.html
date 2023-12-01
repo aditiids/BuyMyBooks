@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Placed - Thank You!</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            font-family: 'Poppins', sans-serif;
+            background-color: transparent;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 2;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-link {
+            text-decoration: none;
+        }
+
+        .logo {
+            width: 130px;
+            max-height: 130px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        h1 {
+            margin: 0;
+            margin-top: 50px;
+            font-size: 2em;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        #homepage-btn {
+            background-color: #ff0000;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: inline-block;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        #homepage-btn:hover {
+            background-color: #cc0000;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo-link">
+            <img src="images/logo.png" alt="Logo" class="logo">
+        </a>
+    </header>
+    <h1>Thank you! Your order has been placed.</h1>
+    <p>We appreciate your business.</p>
+    <a href="index.html" id="homepage-btn">Go back to the homepage</a>
+    <footer>
+        &copy; 2023 Your Bookstore. All rights reserved.
+    </footer>
+</body>
+</html>
