@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout - Aditi's Bookstore</title>
+    <title>Checkout - Book Vortex</title>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -141,7 +141,7 @@
 </section>
 
 <footer>
-    <p>&copy; 2023 Aditi's Bookstore. No rights reserved.</p>
+    <p>&copy; 2023 Book Vortex. All rights reserved.</p>
 </footer>
 
 <script>
@@ -155,19 +155,17 @@
             orderSummaryElement.innerHTML = '<p>Your cart is empty.</p>';
         } else {
             let orderDetails = '<p>Order Summary:</p>';
+cart.forEach((book) => {
+    const bookId = book.bookId;
+    const imageFilename = bookId.replace('book', '') + '.jpg';
 
-            cart.forEach((book) => {
-                orderDetails += `<div class="order-item">
-                                    <img src="images/${book.id}.jpg" alt="${book.title} Image" class="book-image">
-                                    <div class="order-details">
-                                        <p>${book.title}</p>
-                                        <p>Price: ₹${book.price}</p>
-                                    </div>
-                                </div>`;
-            });
-
-            orderDetails += `<p>Total: ₹${calculateTotal()}</p>`;
-            orderSummaryElement.innerHTML = orderDetails;
+    orderDetails += `<div class="order-item">
+                        <img src="images/${imageFilename}" alt="${book.title} Image" class="book-image">
+                        <div class="order-details">
+                            <p>${book.title}</p>
+                            <p>Price: ₹${book.price}</p>
+                        </div>
+                    </div>`;
         }
     }
 
