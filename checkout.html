@@ -126,7 +126,62 @@
     <p>&copy; 2023 Book Vortex. All rights reserved.</p>
 </footer>
 
-<script src="script.js"></script>
+<script>
+    // Initialize cart from local storage or an empty array
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function displayOrderSummary() {
+        const orderSummaryElement = document.getElementById('orderSummary');
+
+        if (cart.length === 0) {
+            orderSummaryElement.innerHTML = '<p>Your cart is empty.</p>';
+        } else {
+            let orderDetails = '<p>Order Summary:</p>';
+
+            cart.forEach((book) => {
+                orderDetails += `<div class="order-item">
+                                    <img src="images/${book.bookId}.jpg" alt="${book.title} Image" class="book-image">
+                                    <div class="order-details">
+                                        <p>${book.title}</p>
+                                        <p>Price: ₹${book.price}</p>
+                                    </div>
+                                </div>`;
+            });
+
+            orderDetails += `<p>Total: ₹${calculateTotal()}</p>`;
+            orderSummaryElement.innerHTML = orderDetails;
+        }
+    }
+
+    function submitOrder() {
+        if (cart.length === 0) {
+            alert("Your cart is empty. Add items to proceed to checkout.");
+        } else {
+            // Add your logic for submitting the order (e.g., sending data to a server)
+            alert("Order submitted successfully!");
+
+            // Clear the cart after submitting the order
+            cart = [];
+            updateCart();
+
+            // Redirect to a thank you page or homepage
+            window.location.href = 'thankyou.html';
+        }
+    }
+
+    function calculateTotal() {
+        return cart.reduce((total, book) => total + book.price, 0).toFixed(2);
+    }
+
+    function updateCart() {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    // Initialize the checkout page when it loads
+    window.onload = function () {
+        displayOrderSummary();
+    };
+</script>
 
 </body>
 </html>
