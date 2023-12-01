@@ -23,7 +23,7 @@
             overflow: hidden;
         }
 
-        .forms-container {
+.forms-container {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -41,6 +41,15 @@
   display: grid;
   grid-template-columns: 1fr;
   z-index: 5;
+}
+        
+.image {
+    width: 100%; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 400px; /* Set a maximum width if necessary */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: transform 1.1s ease-in-out;
+    transition-delay: 0.4s;
 }
 
 form {
