@@ -6,7 +6,45 @@
     <title>Login Book Vortex</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <style>
-        /* Your existing styles here */
+         body {
+            font-family: 'Roboto', sans-serif;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            color: white;
+        }
+
+        .login-container {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .login-container:hover {
+            color: #000;
+        }
+
+        input {
+            margin: 10px;
+            padding: 8px;
+            border: 1px solid #777;
+            border-radius: 4px;
+            width: 200px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
 
         .message-container {
             display: none; /* Initially hide the message container */
