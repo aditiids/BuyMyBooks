@@ -68,22 +68,17 @@
         }
 
         .cart-item button {
-            background-color: rgba(0, 0, 0, 0);
+            background-color: #ff5555;
             color: white;
-            border: 2px solid #fff;
-            padding: 8px 30px;
-            margin-top: 10px;
-            font-weight: 600;
+            border: none;
+            padding: 0.5em;
+            border-radius: 3px;
             cursor: pointer;
-            text-transform: uppercase;
-            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
-            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
         }
 
         .cart-item button:hover {
-            background-color: #05e62e;
-            color: black;
-            border: 2px solid #000;
+            background-color: #ff0000;
         }
 
         footer {
@@ -109,6 +104,11 @@
 
         .order-details {
             flex: 1;
+        }
+
+        #totalPrice {
+            text-align: center;
+            margin-top: 10px;
         }
 
         #placeOrderBtn {
@@ -142,6 +142,9 @@
     <div id="orderSummary">
         <!-- Order summary will be displayed here -->
     </div>
+    <div id="totalPrice">
+        <!-- Total price will be displayed here -->
+    </div>
 </section>
 
 <button id="placeOrderBtn" onclick="submitOrder()">Place Order</button>
@@ -171,9 +174,14 @@
                                 </div>`;
             });
 
-            orderDetails += `<p>Total: ₹${calculateTotal()}</p>`;
             orderSummaryElement.innerHTML = orderDetails;
         }
+    }
+
+    function displayTotalPrice() {
+        const totalPriceElement = document.getElementById('totalPrice');
+        const total = calculateTotal();
+        totalPriceElement.innerHTML = `<p>Total: ₹${total}</p>`;
     }
 
     function submitOrder() {
@@ -203,6 +211,7 @@
     // Initialize the checkout page when it loads
     window.onload = function () {
         displayOrderSummary();
+        displayTotalPrice();
     };
 </script>
 
