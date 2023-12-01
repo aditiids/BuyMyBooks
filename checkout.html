@@ -159,25 +159,30 @@
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     function displayOrderSummary() {
-        const orderSummaryElement = document.getElementById('orderSummary');
+    const orderSummaryElement = document.getElementById('orderSummary');
 
-        if (cart.length === 0) {
-            orderSummaryElement.innerHTML = '<p>Your cart is empty.</p>';
-        } else {
-            let orderDetails = '<p>Order Summary:</p>';
-cart.forEach((book) => {
-    const bookId = book.bookId;
-    const imageFilename = bookId.replace('book', '') + '.jpg';
+    if (cart.length === 0) {
+        orderSummaryElement.innerHTML = '<p>Your cart is empty.</p>';
+    } else {
+        let orderDetails = '<p>Order Summary:</p>';
 
-    orderDetails += `<div class="order-item">
-                        <img src="images/${imageFilename}" alt="${book.title} Image" class="book-image">
-                        <div class="order-details">
-                            <p>${book.title}</p>
-                            <p>Price: ₹${book.price}</p>
-                        </div>
-                    </div>`;
-        }
+        cart.forEach((book) => {
+            const bookId = book.bookId;
+            const imageFilename = bookId.replace('book', '') + '.jpg';
+
+            orderDetails += `<div class="order-item">
+                                <img src="images/${imageFilename}" alt="${book.title} Image" class="book-image">
+                                <div class="order-details">
+                                    <p>${book.title}</p>
+                                    <p>Price: ₹${book.price}</p>
+                                </div>
+                            </div>`;
+        });
+
+        orderDetails += `<p>Total: ₹${calculateTotal()}</p>`;
+        orderSummaryElement.innerHTML = orderDetails;
     }
+}
 
     function submitOrder() {
         if (cart.length === 0) {
