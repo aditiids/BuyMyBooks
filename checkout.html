@@ -88,6 +88,7 @@
             position: fixed;
             bottom: 0;
             color: white;
+            width: 100%;
         }
 
         .order-item {
@@ -112,9 +113,9 @@
             padding: 10px 20px;
             text-align: center;
             text-decoration: none;
-            display: inline-block;
+            display: block;
             font-size: 16px;
-            margin-top: 20px;
+            margin: 20px auto;
             cursor: pointer;
             border-radius: 5px;
         }
@@ -136,9 +137,9 @@
     <div id="orderSummary">
         <!-- Order summary will be displayed here -->
     </div>
+</section>
 
 <button id="placeOrderBtn" onclick="submitOrder()">Place Order</button>
-</section>
 
 <footer>
     <p>&copy; 2023 Book Vortex. All rights reserved.</p>
@@ -156,10 +157,10 @@
         } else {
             let orderDetails = '<p>Order Summary:</p>';
 
-            cart.forEach((book) => {
+            cart.forEach((book, index) => {
                 orderDetails += `<div class="order-item">
                                     <div class="order-details">
-                                        <p>${book.title}</p>
+                                        <p>${index + 1}. ${book.title}</p>
                                         <p>Price: ₹${book.price}</p>
                                     </div>
                                 </div>`;
