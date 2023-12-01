@@ -166,18 +166,15 @@
     } else {
         let orderDetails = '<p>Order Summary:</p>';
 
-        cart.forEach((book) => {
-            const bookId = book.bookId;
-            const imageFilename = bookId.replace('book', '') + '.jpg';
-
-            orderDetails += `<div class="order-item">
-                                <img src="images/${imageFilename}" alt="${book.title} Image" class="book-image">
-                                <div class="order-details">
-                                    <p>${book.title}</p>
-                                    <p>Price: ₹${book.price}</p>
-                                </div>
-                            </div>`;
-        });
+       G
+            cart.forEach((book) => {
+                orderDetails += `<div class="order-item">
+                                    <img src="images/${book.bookId}.jpg" alt="${book.title} Image" class="book-image">
+                                    <div class="order-details">
+                                        <p>${book.title}</p>
+                                        <p>Price: ₹${book.price}</p>
+                                    </div>
+                                </div>`; 
 
         orderDetails += `<p>Total: ₹${calculateTotal()}</p>`;
         orderSummaryElement.innerHTML = orderDetails;
