@@ -7,186 +7,175 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap">
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
     <style>
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: #000;
-}
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #000;
+        }
 
-.input-field {
-  max-width: 380px;
-  width: 100%;
-  background-color: #f0f0f0;
-  margin: 10px 0;
-  height: 55px;
-  border-radius: 55px;
-  display: grid;
-  grid-template-columns: 15% 85%;
-  padding: 0 0.4rem;
-  position: relative;
-}
+        .input-field {
+            max-width: 380px;
+            width: 100%;
+            background-color: #f0f0f0;
+            margin: 10px 0;
+            height: 55px;
+            border-radius: 55px;
+            display: grid;
+            grid-template-columns: 15% 85%;
+            padding: 0 0.4rem;
+            position: relative;
+        }
 
-.input-field i {
-  text-align: center;
-  line-height: 55px;
-  color: #acacac;
-  transition: 0.5s;
-  font-size: 1.1rem;
-}
+        .input-field i {
+            text-align: center;
+            line-height: 55px;
+            color: #acacac;
+            transition: 0.5s;
+            font-size: 1.1rem;
+        }
 
-.input-field input {
-  background: none;
-  outline: none;
-  border: none;
-  line-height: 1;
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: #333;
-}
+        .input-field input {
+            background: none;
+            outline: none;
+            border: none;
+            line-height: 1;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #333;
+        }
 
-.input-field input::placeholder {
-  color: #aaa;
-  font-weight: 500;
-}
+        .input-field input::placeholder {
+            color: #aaa;
+            font-weight: 500;
+        }
 
-.container {
-    position: relative;
-    width: 100%;
-    max-width: 800px; /* Adjust the max-width as needed */
-}
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+        }
 
-.forms-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
+        .forms-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
 
-.signin-signup {
-    width: 100%;
-    color: #fff;
-    display: grid;
-    grid-template-columns: 1fr;
-}
+        .signin-signup {
+            width: 100%;
+            color: #fff;
+            display: grid;
+            grid-template-columns: 1fr;
+        }
 
-form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0rem 5rem;
-    transition: all 0.2s 0.7s;
-    overflow: hidden;
-}
-.btn {
-  width: 150px;
-  background: none;
-  border: 2px solid #fff;
-  outline: none;
-  height: 49px;
-  border-radius: 49px;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 600;
-  margin: 10px 0;
-  cursor: pointer;
-  transition: 0.5s;
-}
+        form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0rem 5rem;
+            transition: all 0.2s 0.7s;
+            overflow: hidden;
+        }
 
-.btn:hover {
-  color: #000;
-  border: 2px solid #000;
-  background-color: #05e62e;
-}
-.panels-container {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
+        .btn {
+            width: 150px;
+            background: none;
+            border: 2px solid #fff;
+            outline: none;
+            height: 49px;
+            border-radius: 49px;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin: 10px 0;
+            cursor: pointer;
+            transition: 0.5s;
+        }
 
-.container:before {
-  content: "";
-  position: absolute;
-  height: 2000px;
-  width: 2000px;
-  transform: translateY(-50%);
-  background: none;
-  transition: 1.8s ease-in-out;
-  border-radius: 50%;
-  z-index: 6;
-}
+        .btn:hover {
+            color: #000;
+            border: 2px solid #000;
+            background-color: #05e62e;
+        }
 
-footer {
-    background-color: none;
-    color: white;
-    text-align: center;
-    padding: 1em;
-    margin-bottom: 0px;
-    margin-top: 20px;
-    position: bottom;
-    z-index: 1;
-}
+        .panels-container {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
 
-footer {
-    background-color: none;
-    color: white;
-    text-align: center;
-    padding: 1em;
-    margin-top: 20px;
-    position: relative;
-    z-index: 1;
-}
+        .container:before {
+            content: "";
+            position: absolute;
+            height: 2000px;
+            width: 2000px;
+            transform: translateY(-50%);
+            background: none;
+            transition: 1.8s ease-in-out;
+            border-radius: 50%;
+            z-index: 6;
+        }
 
-
-</style>
+        footer {
+            background-color: none;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            margin-bottom: 0px;
+            margin-top: 20px;
+            position: bottom;
+            z-index: 1;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-    <div class="forms-container">
-        <div class="signin-signup">
-            <form action="" class="sign-in-form">
-                <!-- Sign In form content -->
-                <h2 class="title">Sign In</h2>
-                <div class="input-field">
-                    <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Username" />
-                </div>
-                <div class="input-field">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Password" />
-                </div>
-                <input type="submit" value="Login" class="btn solid" />
-
-            </form>
+        <div class="forms-container">
+            <div class="signin-signup">
+                <form action="" class="sign-in-form">
+                    <!-- Sign In form content -->
+                    <h2 class="title">Sign In</h2>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Username" />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password" />
+                    </div>
+                    <input type="submit" value="Login" class="btn solid" />
+                </form>
+            </div>
         </div>
     </div>
-</div>
 
     <script>
-      const sign_in_btn = document.querySelector("#sign-in-btn");
-const sign_up_btn = document.querySelector("#sign-up-btn");
-const container = document.querySelector(".container");
+        document.addEventListener('DOMContentLoaded', function () {
+            const container = document.querySelector(".container");
 
-sign_up_btn.addEventListener('click', () =>{
-    container.classList.add("sign-up-mode");
-});
+            document.querySelector("#sign-up-btn").addEventListener('click', () => {
+                container.classList.add("sign-up-mode");
+            });
 
-sign_in_btn.addEventListener('click', () =>{
-    container.classList.remove("sign-up-mode");
-});
+            document.querySelector("#sign-in-btn").addEventListener('click', () => {
+                container.classList.remove("sign-up-mode");
+            });
+        });
     </script>
+
     <footer>
         &copy; 2023 Book Vortex. All rights reserved.
     </footer>
 </body>
 </html>
-
