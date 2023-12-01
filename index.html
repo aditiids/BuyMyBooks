@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout - Book Vortex</title>
+    <title>Book Vortex</title>
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Poppins', sans-serif;
             background-color: black;
             color: white;
             margin: 0;
@@ -14,12 +16,54 @@
         }
 
         header {
-            font-family: 'Roboto', sans-serif;
-            background-color: #333;
+            font-family: 'Poppins', sans-serif;
+            background-color: transparent;
             color: white;
             text-align: center;
             padding: 1em;
-            position: relative;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 2;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-link {
+            text-decoration: none;
+        }
+
+        .logo {
+            width: 130px;
+            max-height: 130px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .header-buttons img {
+            cursor: pointer;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        video {
+            max-width: 100%;
+            height: auto;
         }
 
         section {
@@ -27,179 +71,410 @@
             flex-wrap: wrap;
             justify-content: space-around;
             padding: 1em;
-            margin-top: 20px;
+            margin-top: 120px;
+            background-color: black;
         }
 
         .book {
-            background-color: #333;
-            border: 1px solid #555;
-            border-radius: 5px;
+            background-color: black;
+            border: 0.5px solid red;
+            border-radius: 2px;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
             margin: 1em;
             padding: 1em;
             max-width: 200px;
             text-align: center;
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
 
-        .cart-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #555;
-            border: 1px solid #777;
-            border-radius: 5px;
-            margin: 1em;
-            padding: 1em;
-            max-width: 400px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        .book:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
         }
 
-        #cartImages img {
-            max-width: 100px; /* Adjust the size as needed */
+        .book img {
+            max-width: 100%;
             height: auto;
-            margin-right: 10px;
-        }
-
-        .book-details {
-            flex-grow: 1;
-            text-align: left;
-        }
-
-        .cart-item button {
-            background-color: #ff5555;
-            color: white;
-            border: none;
-            padding: 0.5em;
-            border-radius: 3px;
-            cursor: pointer;
-            transition: background-color 0.3s ease-in-out;
-        }
-
-        .cart-item button:hover {
-            background-color: #ff0000;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1em;
-            background-color: #333;
-            color: white;
-        }
-
-        .order-item {
-            display: flex;
-            align-items: center;
             margin-bottom: 10px;
         }
 
-        .book-image {
-            max-width: 50px; /* Set the desired width for the images */
-            margin-right: 10px;
-        }
-
-        .order-details {
-            flex: 1;
-        }
-
-        #placeOrderBtn {
-            background-color: #4CAF50;
+        .book button {
+            background-color: rgba(0, 0, 0, 0);
             color: white;
-            border: none;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin-top: 20px;
+            border: 2px solid #fff;
+            padding: 8px 30px;
+            margin-top: 10px;
+            font-weight: 600;
             cursor: pointer;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
             border-radius: 5px;
         }
 
-        #placeOrderBtn:hover {
-            background-color: #45a049;
+        .book button:hover {
+            background-color: #05e62e;
+            color: black;
+            border: 2px solid #000;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .book p {
+            color: white;
+        }
+
+        .book p.price {
+            color: red;
+        }
+
+        #viewCartBtn {
+            cursor: pointer;
+            position: right;
+            background: none;
+            border: none;
+        }
+
+        #viewCartBtn img {
+            width: 50px;
+            background: none;
+            opacity: 1;
+        }
+
+        .book button {
+            margin-top: 10px;
+        }
+
+        .fit-to-page {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        #logo {
+            cursor: pointer;
+            max-height: 80px;
+            margin: 5px;
         }
     </style>
 </head>
+
 <body>
+    <header>
+        <a href="index.html" class="logo-link">
+            <img src="images/logonew.png" alt="Book Vortex Logo" class="logo">
+        </a>
 
-<header>
-    <h1>BOOK VORTEX</h1>
-</header>
+        <h1>BOOK VORTEX</h1>
+        <div class="header-buttons">
+            <img src="images/profile.png" alt="Button 2" onclick="window.location.href='login.html'">
+            <img src="images/genre.png" alt="Button 3" onclick="window.location.href='genre.html'">
+            <button id="viewCartBtn" onclick="viewCart()">
+                <img src="images/cart.png" alt="Shopping Cart Icon">
+            </button>
+        </div>
+    </header>
 
-<section>
-    <h2>Checkout Summary</h2>
-
-    <div id="orderSummary">
-        <!-- Order summary will be displayed here -->
+    <section>
+    <img src="images/now.png" alt="Trending Now">
+    <!-- Book 1 -->
+    <div class="book" id="book1">
+        <img src="images/1.jpg" alt="Book Title 1 Image">
+        <h2>1984</h2>
+        <p>by George Orwell</p>
+        <p>GENRE: Distopian</p>
+        <p class="price">₹149</p>
+        <button onclick="addToCart('1984', 149, 'book1')">Add to Cart</button>
     </div>
-    <div id="cartImages">
-        <!-- Cart images will be displayed here -->
+
+    <!-- Book 2 -->
+    <div class="book" id="book2">
+        <img src="images/2.jpg" alt="Book Title 2 Image">
+        <h2>The Alchemist</h2>
+        <p>by Paulo Coelho</p>
+        <p>GENRE: Self Help</p>
+        <p class="price">₹1699</p>
+        <button onclick="addToCart('The Alchemist', 1699)">Add to Cart</button>
     </div>
 
-    <button id="placeOrderBtn" onclick="submitOrder()">Place Order</button>
-</section>
+    <!-- Book 3 -->
+    <div class="book" id="book3">
+        <img src="images/3.jpg" alt="Book Title 3 Image">
+        <h2>A Game Of Thrones</h2>
+        <p>by George R R Martin</p>
+        <p>GENRE: Fantasy</p>
+        <p class="price">₹499</p>
+        <button onclick="addToCart('A Game Of Thrones', 499)">Add to Cart</button>
+    </div>
 
-<footer>
-    <p>&copy; 2023 Book Vortex. All rights reserved.</p>
-</footer>
+    <!-- Book 4 -->
+    <div class="book" id="book4">
+        <img src="images/4.jpg" alt="Book Title 4 Image">
+        <h2>Vinland Saga Vol. 01</h2>
+        <p>by Makoto Yukimura</p>
+        <p>GENRE: Manga</p>
+        <p class="price">₹899</p>
+        <button onclick="addToCart('Vinland Sage Vol. 01', 899)">Add to Cart</button>
+    </div>
 
-<script>
-    // Initialize cart from local storage or an empty array
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    <!-- Book 5 -->
+    <div class="book" id="book5">
+        <img src="images/5.jpg" alt="Book Title 5 Image">
+        <h2>Foundation</h2>
+        <p>by Issac Asimov</p>
+        <p>GENRE: Sci-Fi</p>
+        <p class="price">₹349</p>
+        <button onclick="addToCart('Foundation', 349)">Add to Cart</button>
+    </div>
 
-    function displayOrderSummary() {
-        const orderSummaryElement = document.getElementById('orderSummary');
+    <!-- Book 6 -->
+    <div class="book" id="book6">
+        <img src="images/6.jpg" alt="Book Title 6 Image">
+        <h2>Lord Of The Rings</h2>
+        <p>by  J.R.R. Tolkein</p>
+        <p>GENRE: Fantasy</p>
+        <p class="price">₹499</p>
+        <button onclick="addToCart('Lord Of The Rings', 499)">Add to Cart</button>
+    </div>
+    
+    <!-- Book 7 -->
+    <div class="book" id="book7">
+        <img src="images/7.jpg" alt="Book Title 7 Image">
+        <h2>Atomic Thinking</h2>
+        <p>by James Clear </p>
+        <p>GENRE: Self Help</p>
+        <p class="price">₹499</p>
+        <button onclick="addToCart('Atomic Thinking', 499)">Add to Cart</button>
+    </div>
+    
+    <!-- Book 8 -->
+    <div class="book" id="book8">
+        <img src="images/8.jpg" alt="Book Title 8 Image">
+        <h2>Death Note (Black Edition)</h2>
+        <p>by Takeshi Obata</p>
+        <p>GENRE: Manga</p>
+        <p class="price">₹649<p>
+        <button onclick="addToCart('Death Note Vol. 01', 649)">Add to Cart</button>
+    </div>
+    
+    <!-- Book 9 -->
+    <div class="book" id="book9">
+        <img src="images/9.jpg" alt="Book Title 9 Image">
+        <h2>Dune</h2></h2>
+        <p>by Frank Herbert</p>
+        <p>Genre: Sci-Fi</p>
+        <p class="price">₹1199</p>
+        <button onclick="addToCart('Dune', 1199)">Add to Cart</button>
+    </div>
+    
+    <!-- Book 10 -->
+    <div class="book" id="book10">
+        <img src="images/10.jpg" alt="Book Title 10 Image">
+        <h2>Hitchhiker's Guide to the Galaxy</h2>
+        <p>by J.R.R. Tolkein</p>
+        <p>GENRE: Humour, Sci-Fi</p>
+        <p class="price">₹999</p>
+        <button onclick="addToCart('Hitchhiker\'s Guide to the Galaxy', 999)">Add to Cart</button>
+    </div>
 
-        if (cart.length === 0) {
-            orderSummaryElement.innerHTML = '<p>Your cart is empty.</p>';
-        } else {
-            let orderDetails = '<p>Order Summary:</p>';
+    <!--Book 11-->
+    <div class="book" id="book11">
+        <img src="images/11.jpg" alt="Book Title 11 Image">
+        <h2>The Martian</h2>
+        <p>by Andy Weir</p>
+        <p>GENRE: Sci-Fi</p>
+        <p class="price">₹599</p>
+        <button onclick="addToCart('The Martian', 599)">Add to Cart</button>
+    </div>
+    <!--Book 12-->
+    <div class="book" id="book12">
+        <img src="images/12.jpg" alt="Book Title 12 Image">
+        <h2>The Hunger Games</h2>
+        <p>by Suzanne Collins</p>
+        <p>GENRE: Dystopian</p>
+        <p class="price">₹399</p>
+        <button onclick="addToCart('The Hunger Games', 399)">Add to Cart</button>
+    </div>
+    <!--Book 13-->
+    <div class="book" id="book13">
+        <img src="images/13.jpg" alt="Book Title 13 Image">
+        <h2>Brave New World</h2>
+        <p>by Aldous Huxley</p>
+        <p>GENRE: Dystopian</p>
+        <p class="price">₹1199</p>
+        <button onclick="addToCart('Brave New World', 1199)">Add to Cart</button>
+    </div>
+    <!--Book 14-->
+    <div class="book" id="book14">
+        <img src="images/14.jpg" alt="Book Title 14 Image">
+        <h2>Thinking, Fast & Slow</h2>
+        <p>by Daniel Kahneman</p>
+        <p>GENRE: Self-Help</p>
+        <p class="price">₹429</p>
+        <button onclick="addToCart('Thinking, Fast & Slow', 429)">Add to Cart</button>
+    </div>
+    <!--Book 15-->
+    <div class="book" id="book15">
+        <img src="images/15.jpg" alt="Book Title 15 Image">
+        <h2>Harry Potter and the Philosopher's Stone</h2>
+        <p>by J.K. Rowling</p>
+        <p>GENRE: Fantasy</p>
+        <p class="price">₹349</p>
+        <button onclick="addToCart('Harry Potter and the Philosopher\'s Stone', 349)">Add to Cart</button>
+    </div>
+    <!--Book 16-->
+    <div class="book" id="book16">
+        <img src="images/16.jpg" alt="Book Title 16 Image">
+        <h2>Naruto, Vol. 01</h2>
+        <p>by Masashi Kishimoto</p>
+        <p>GENRE: Manga</p>
+        <p class="price">₹599</p>
+        <button onclick="addToCart('Naruto Vol. 01', 599)">Add to Cart</button>
+    </div>
+    <!--Book 17-->
+    <div class="book" id="book17">
+        <img src="images/17.jpg" alt="Book Title 17 Image">
+        <h2>Dark Matter</h2>
+        <p>by Blake Crouch </p>
+        <p>GENRE: Sci-Fi</p>
+        <p class="price">₹379</p>
+        <button onclick="addToCart('The Martian', 379)">Add to Cart</button>
+    </div>
+    <!--Book 18-->
+    <div class="book" id="book18">
+        <img src="images/18.jpg" alt="Book Title 18 Image">
+        <h2>The Immortals of Meluha</h2>
+        <p>by Amish Tripathi</p>
+        <p>GENRE: Fantasy</p>
+        <p class="price">₹379</p>
+        <button onclick="addToCart('The Martian', 379)">Add to Cart</button>
+    </div>
+    <!--Book 19-->
+    <div class="book" id="book19">
+        <img src="images/19.jpg" alt="Book Title 19 Image">
+        <h2>Berserk Deluxe Edition Vol. 01</h2>
+        <p>by Kentaro Miura</p>
+        <p>GENRE: Manga</p>
+        <p class="price">₹2199</p>
+        <button onclick="addToCart('Berserk Vol. 01', 2199)">Add to Cart</button>
+    </div>
+    <!--Book 20-->
+    <div class="book" id="book20">
+        <img src="images/20.jpg" alt="Book Title 20 Image">
+        <h2>The Subtle Art of Not Giving a F*ck</h2>
+        <p>by Mark Manson</p>
+        <p>GENRE: Self-Help</p>
+        <p class="price">₹299</p>
+        <button onclick="addToCart('The Subtle Art of Not Giving a F*ck', 299)">Add to Cart</button>
+    </div>
+    </section>
 
-            cart.forEach((book) => {
-                orderDetails += `<div class="order-item">
-                                    <img src="images/${book.bookId}.jpg" alt="${book.title} Image" class="book-image">
-                                    <div class="order-details">
-                                        <p>${book.title}</p>
-                                        <p>Price: ₹${book.price}</p>
-                                    </div>
-                                </div>`;
-            });
+    <footer>
+        <p>&copy; 2023 Book Vortex. All rights reserved.</p>
+    </footer>
+    <script>
+        // Initialize cart from local storage or an empty array
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-            orderDetails += `<p>Total: ₹${calculateTotal()}</p>`;
-            orderSummaryElement.innerHTML = orderDetails;
-        }
-    }
-
-    function submitOrder() {
-        if (cart.length === 0) {
-            alert("Your cart is empty. Add items to proceed to checkout.");
-        } else {
-            // Add your logic for submitting the order (e.g., sending data to a server)
-            alert("Order submitted successfully!");
-
-            // Clear the cart after submitting the order
-            cart = [];
+        // Function to add a book to the cart
+        function addToCart(title, price, bookId) {
+            cart.push({ title, price, bookId });
             updateCart();
-
-            // Redirect to a thank you page or homepage
-            window.location.href = 'thankyou.html';
+            alert(`Added ${title} to the cart. Total Price: ₹${calculateTotal()}`);
         }
-    }
 
-    function calculateTotal() {
-        return cart.reduce((total, book) => total + book.price, 0).toFixed(2);
-    }
+        // Function to calculate the total price of items in the cart
+        function calculateTotal() {
+            return cart.reduce((total, book) => total + book.price, 0).toFixed(2);
+        }
 
-    function updateCart() {
-        localStorage.setItem('cart', JSON.stringify(cart));
-    }
+        // Function to view the cart and go to checkout
+        function viewCart() {
+            if (cart.length === 0) {
+                console.log("Your cart is empty.");
+            } else {
+                // Redirect to the checkout page
+                window.location.href = 'checkout.html';
+            }
+        }
 
-    // Initialize the checkout page when it loads
-    window.onload = function () {
-        displayOrderSummary();
-    };
-</script>
+        // Function to remove a book from the cart
+        function removeFromCart(bookId) {
+            cart = cart.filter((book) => book.bookId !== bookId);
+            updateCart();
+            viewCart();
+        }
 
+        // Function to update the cart in local storage
+        function updateCart() {
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        // Function to handle the checkout process
+        function checkout() {
+            alert("Checkout functionality goes here!");
+            // Add your checkout logic here (e.g., sending the order to a server, processing payment, etc.)
+        }
+
+        function displayOrderSummary() {
+            const orderSummaryElement = document.getElementById('orderSummary');
+
+            if (cart.length === 0) {
+                orderSummaryElement.innerHTML = '<p>Your cart is empty.</p>';
+            } else {
+                let orderDetails = '<p>Order Summary:</p>';
+
+                cart.forEach((book) => {
+                    orderDetails += `<div class="order-item">
+                                        <img src="images/${book.bookId}.jpg" alt="${book.title} Image" class="book-image">
+                                        <div class="order-details">
+                                            <p>${book.title}</p>
+                                            <p>Price: ₹${book.price}</p>
+                                        </div>
+                                    </div>`;
+                });
+
+                orderDetails += `<p>Total: ₹${calculateTotal()}</p>`;
+                orderSummaryElement.innerHTML = orderDetails;
+            }
+        }
+
+        // Function to submit the order
+        function submitOrder() {
+            if (cart.length === 0) {
+                alert("Your cart is empty. Add items to proceed to checkout.");
+            } else {
+                // Add your logic for submitting the order (e.g., sending data to a server)
+                alert("Order submitted successfully!");
+
+                // Clear the cart after submitting the order
+                cart = [];
+                updateCart();
+
+                // Redirect to a thank you page or homepage
+                window.location.href = 'thankyou.html';
+            }
+        }
+
+        // Initialize the cart when the page loads
+        window.onload = function () {
+            // The viewCart function is not needed on page load
+            // If needed, you can call viewCart() here
+        };
+
+        // Initialize the checkout page when it loads
+        if (window.location.pathname.includes('checkout.html')) {
+            displayOrderSummary();
+        }
+    </script>
+    
 </body>
+
 </html>
