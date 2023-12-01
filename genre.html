@@ -6,7 +6,189 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Vortex</title>
-    <link rel="stylesheet" href="genre.css">
+    <style>
+        body {
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    font-family: 'Poppins', sans-serif;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-link {
+    text-decoration: none;
+}
+
+.logo {
+    width: 130px;
+    max-height: 130px;
+    margin: 5px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+h1 {
+    margin: 0;
+    margin-left: 8;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header-buttons img {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+.genre-container {
+    padding: 1em;
+    margin-top: 120px;
+}
+
+.genre-group {
+    background-color: #2a2b2b;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.genre-group h2 {
+    color: white;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+.book {
+    background-color: black;
+    border: 0.5px solid white;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    margin: 1em;
+    padding: 1em;
+    max-width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.book:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.book {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.book img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.book button {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: 2px solid #fff;
+    padding: 8px 30px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.book button:hover {
+    background-color: black;
+    color: white;
+    border: 2px solid #ff0000;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.book p {
+    color: white;
+}
+
+.book p.price {
+    color: red;
+}
+
+#viewCartBtn {
+    cursor: pointer;
+    position: right;
+    background: none;
+    border: none;
+}
+
+#viewCartBtn img {
+    width: 50px;
+    background: none;
+    opacity: 1;
+}
+
+.book button {
+    margin-top: 10px;
+}
+
+.fit-to-page {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+#logo {
+    cursor: pointer;
+    max-height: 80px; 
+    margin: 5px;
+}
+    </style>
 </head>
 
 <body>
@@ -214,7 +396,101 @@
     <footer>
         <p>&copy; 2023 Aditi's Bookstore. No rights reserved.</p>
     </footer>
-    <script src="script.js"></script>
+    <script>
+        // Initialize cart from local storage or an empty array
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Function to add a book to the cart
+        function addToCart(title, price, bookId) {
+            cart.push({ title, price, bookId });
+            updateCart();
+            alert(`Added ${title} to the cart. Total Price: ₹${calculateTotal()}`);
+        }
+
+        // Function to calculate the total price of items in the cart
+        function calculateTotal() {
+            return cart.reduce((total, book) => total + book.price, 0).toFixed(2);
+        }
+
+        // Function to view the cart and go to checkout
+        function viewCart() {
+            if (cart.length === 0) {
+                console.log("Your cart is empty.");
+            } else {
+                // Redirect to the checkout page
+                window.location.href = 'checkout.html';
+            }
+        }
+
+        // Function to remove a book from the cart
+        function removeFromCart(bookId) {
+            cart = cart.filter((book) => book.bookId !== bookId);
+            updateCart();
+            viewCart();
+        }
+
+        // Function to update the cart in local storage
+        function updateCart() {
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        // Function to handle the checkout process
+        function checkout() {
+            alert("Checkout functionality goes here!");
+            // Add your checkout logic here (e.g., sending the order to a server, processing payment, etc.)
+        }
+
+        function displayOrderSummary() {
+            const orderSummaryElement = document.getElementById('orderSummary');
+
+            if (cart.length === 0) {
+                orderSummaryElement.innerHTML = '<p>Your cart is empty.</p>';
+            } else {
+                let orderDetails = '<p>Order Summary:</p>';
+
+                cart.forEach((book) => {
+                    orderDetails += `<div class="order-item">
+                                        <img src="images/${book.bookId}.jpg" alt="${book.title} Image" class="book-image">
+                                        <div class="order-details">
+                                            <p>${book.title}</p>
+                                            <p>Price: ₹${book.price}</p>
+                                        </div>
+                                    </div>`;
+                });
+
+                orderDetails += `<p>Total: ₹${calculateTotal()}</p>`;
+                orderSummaryElement.innerHTML = orderDetails;
+            }
+        }
+
+        // Function to submit the order
+        function submitOrder() {
+            if (cart.length === 0) {
+                alert("Your cart is empty. Add items to proceed to checkout.");
+            } else {
+                // Add your logic for submitting the order (e.g., sending data to a server)
+                alert("Order submitted successfully!");
+
+                // Clear the cart after submitting the order
+                cart = [];
+                updateCart();
+
+                // Redirect to a thank you page or homepage
+                window.location.href = 'thankyou.html';
+            }
+        }
+
+        // Initialize the cart when the page loads
+        window.onload = function () {
+            // The viewCart function is not needed on page load
+            // If needed, you can call viewCart() here
+        };
+
+        // Initialize the checkout page when it loads
+        if (window.location.pathname.includes('checkout.html')) {
+            displayOrderSummary();
+        }
+    </script>
 
 </body>
 
